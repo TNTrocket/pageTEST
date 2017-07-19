@@ -1,0 +1,429 @@
+<%- include('header') -%>
+
+        <div class="row">
+            <div id="carousel-banner" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <% if(banners) banners.map(function (item, index) { %>
+                        <li data-target="#carousel-banner" data-slide-to="<%= index %>" <%= index == 0 ? 'class="active"' : '' %>></li>
+                    <%  }) %>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <% if(banners) banners.map(function (item, index) { %>
+                        <div class="item <%= index == 0 ? 'active' : '' %>">
+      <a href="<%= item.url ? item.url : '#' %>" target="_blank">
+                            <img src="<%= item.image %>"  alt="<%= item.url %>" />
+      </a>
+                            <div class="carousel-caption">
+
+                            </div>
+                        </div>
+                    <%  }) %>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="banner-line"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="container">
+                <div class="row top-article">
+                    <div class="col-md-12">
+                        <div class="pull-left">
+                            <ul class="article-list">
+                                <% if(hotArticleList) hotArticleList.map(function (item) { %>
+                                    <li>
+                                        <a href="<%= item.route %>">
+                                            <img src="<%= item.image %>" />
+                                        </a>
+                                        <a href="<%= item.route %>">
+                                            <div class="title"><img src="/assets/images/ic_news.png" /><%= item.title %></div>
+                                        </a>
+                                        <div class="datetime">
+                                            <%= item.publish_date %>
+                                            <a href="/rementuijian"><img src="/assets/images/ic_more.png" /></a>
+                                        </div>
+                                    </li>
+                                <%  }) %>
+                            </ul>
+                        </div>
+                        <div class="pull-right news-article">
+                            <div class="article-title">最新资讯<!-- <a href="/zuixinzixun"><img src="/assets/images/ic_more.png" /></a>--></div>
+                            <div class="article-list">
+                                <div id="carousel-news" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-news" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-news" data-slide-to="1"></li>
+                                        <li data-target="#carousel-news" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner" role="listbox">
+                                        <% if(newsArticleList) newsArticleList.map(function (item, index) { %>
+                                            <div class="item <%= index == 0 ? 'active' : '' %>">
+                                                <a href="<%= item.route %>">
+                                                    <div class="image"><img src="<%= item.image %>" alt="" /></div>
+                                                    <div class="carousel-caption">
+                                                        <%= item.title %>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        <%  }) %>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="article-search">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-search" type="button">Go</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 fudao-title">
+                        <div class="title">如何选择合适的一对一辅导老师</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 fudao-content">
+                        <section id="gallery">
+                            <ul id="myRoundabout">
+                                <!--<li>
+                                    <img src="/assets/test2.png" />
+                                </li>
+                                <li>
+                                    <img src="/assets/test.png" />
+                                </li>
+                                <li>
+                                    <img src="/assets/570.png" />
+                                </li>-->
+                                <li>
+                                    <img src="/assets/images/500.jpg" />
+                                </li>
+                                <li>
+                                    <img src="/assets/images/501.jpg" />
+                                </li>
+                                <li>
+                                    <img src="/assets/images/502.jpg" />
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row xingjilaoshi">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 xingjilaoshi-title">
+                        <div class="xueke">
+                            <ul>
+                                <% if(xingjilaoshiColumn.childColumns) xingjilaoshiColumn.childColumns.map(function (item) { %>
+                                    <li><a href="<%= item.route %>"><%= item.name %></a></li>
+                                <%  }) %>
+                            </ul>
+                        </div>
+                        <div class="laoshi-title">选师无忧&bull;名师推荐</div>
+                        <div class="more-teacher"><a href="<%= xingjilaoshiColumn.route %>">更多老师</a></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="finded-teacher">已成功找到好老师</div>
+                        <div class="finded-teacher-student">
+                            <div id="design" class="marquee">
+                                <div id="design1" style="overflow:hidden;">
+                                    <ul>
+                                        <% if(student) student.map(function (item) { %>
+                                            <li><%= item.mobile_no %> 已经签约</li>
+                                        <%  }) %>
+                                    </ul>
+                                </div>
+                                <div id="design2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="teacher-list">
+                            <% if(teacherList) teacherList.map(function (item) { %>
+                                <li>
+                                    <div class="content">
+                                        <img src="<%= item.avatar %>" />
+                                        <div class="title"><%= item.nick_name %></div>
+                                        <div class="teaching"><%= item.xueke %>/<span><%= item.teaching %>年</span>教龄</div>
+                                        <div class="location">
+                                            <span><img src="/assets/images/ic_location.png" /></span><span><%= item.city_name %></span>
+                                            <span><img src="/assets/images/ic_student.png" /></span><span>已有<%= item.students %>名学生</span>
+                                        </div>
+                                    </div>
+                                    <div class="yuyue"><a href="<%= online.route %>" target="_blank">预约体验课</a></div>
+                                </li>
+                            <%  }) %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var host = window.location.host;
+            if (host == 'v.51xuanshi.com') {
+                var xingjilaoshi = document.getElementsByClassName('xingjilaoshi')[0];
+                xingjilaoshi.style.display='none';
+            }
+        </script>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 youxiuxueyuan-title">
+                        <div class="xuexiban">
+                            2016中高考学习榜
+                        </div>
+                        <div class="title">选师无忧&bull;优秀学员</div>
+                        <div class="more-youxiuxueyuan"><a href="/youxiuxueyuan">更多学员</a></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 student-list">
+                        <ul>
+                            <% if(student) for(var i = 0; i < 4; i++) { %>
+                                <li>
+                                    <img src="/upload/<%= student[i].avatar %>" />
+                                    <div class="title"><%= student[i].name %></div>
+                                    <div class="description"><%= student[i].title %></div>
+                                </li>
+                            <%  } %>
+                        </ul>
+                    </div>
+                    <div style="clear:both"></div>
+                    <div class="student-article-list">
+                        <ul>
+                            <% if(youxiuxueyuanArticleList) youxiuxueyuanArticleList.map(function (item) { %>
+                                <li><div class="title"><a href="<%= item.route %>"><%= item.title %></a></div></li>
+                            <%  }) %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row xuexileyuan">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 xuexileyuan-title">
+                        <div>选师无忧&bull;学习乐园</div>
+                    </div>
+                </div>
+                <div class="row xuexileyuan-line"></div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="xuexileyuan-left pull-left">
+                            <ul>
+                                <li>
+                                    <a href="/xuexileyuan/gaozhong">
+                                        <img src="/assets/images/senior-.png" />
+                                        <img src="/assets/images/senior-click.png" />
+                                    </a>
+                                    <!--<div class="title">高中一对一辅导</div>-->
+                                </li>
+                                <li>
+                                    <a href="/xuexileyuan/chuzhong">
+                                        <img src="/assets/images/junior-.png" />
+                                        <img src="/assets/images/junior-click.png" />
+                                    </a>
+                                    <!--<div class="title">初中一对一辅导</div>-->
+                                </li>
+                                <li>
+                                    <a href="/xuexileyuan/xiaoxue">
+                                        <img src="/assets/images/Primary-.png" />
+                                        <img src="/assets/images/Primary-click.png" />
+                                    </a>
+                                    <!--<div class="title">小学一对一辅导</div>-->
+                                </li>
+                                <li>
+                                    <a href="/xuexileyuan/jiaoyuxinde">
+                                        <img src="/assets/images/etc-.png" />
+                                        <img src="/assets/images/etc-click.png" />
+                                    </a>
+                                    <!--<div class="title">教育心得</div>-->
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="xuexileyuan-right pull-left">
+                            <ul>
+                                <% if(xuexileyuanArticleList) xuexileyuanArticleList.map(function (item) { %>
+                                    <li>
+                                        <div class="title"><a href="<%= item.route %>"><%= item.title %></a></div>
+                                        <div class="date"><%= item.publish_date %></div>
+                                    </li>
+                                <%  }) %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row xuexileyuan-line"></div>
+                <div class="row">
+                    <div class="col-md-12 xuexileyuan-bottom">
+                        <ul>
+                            <li>
+                                <img src="/assets/images/ic_simply.png" />
+                                <div class="title">简单</div>
+                                <div class="description">选师无忧的app拥有海量的名校名师，一键下载，所有老师任君选择，总有一位属于你的名校老师。</div>
+                            </li>
+                            <li>
+                                <img src="/assets/images/ic_safe.png" />
+                                <div class="title">安全</div>
+                                <div class="description">认证制度确保l了教师的身份真实性；在线支付、第三方费用托管制度确保资金安全性。 </div>
+                            </li>
+                            <li>
+                                <img src="/assets/images/ic_convenient.png" />
+                                <div class="title">便捷</div>
+                                <div class="description"> 随时随地掌上搜索好老师， 在线与老师1对1沟通。</div>
+                            </li>
+                            <li>
+                                <img src="/assets/images/ic_major.png" />
+                                <div class="title">专业</div>
+                                <div class="description">   学历与教师资质认证， 确保老师教学水平。 </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 jinkoubei-title"><div>13年国内高端教育品牌&bull;金口碑</div></div>
+                </div>
+                <div class="row jinkoubei-content">
+                    <div class="col-md-5">
+                        <div class="jinkoubei-article-list">
+                            <ul>
+                                <li><div class="title">2010年荣获"最受公众信赖课外辅导品牌"</div></li>
+                                <li><div class="title">2011年荣获"南粤十佳课外辅导品牌"</div></li>
+                                <li><div class="title">2011年荣获第二届广东教育博览会金奖</div></li>
+                                <li><div class="title">2012-2015年 连续三届华南师范大学研究生教师技能大赛特约赞助商</div></li>
+                                <li><div class="title">2015年"选师无忧"项目荣获"中国十佳MBA/EMBA创业奖"</div></li>
+                                <li><div class="title">2015年 全球移动互联网创业大赛路演金奖</div></li>
+                                <li><div class="title">2015年 新浪网第八届"中国教育盛典"提名机构</div></li>
+                                <li><div class="title">2015年 中国国际智慧教育展"中国实力教育辅导品牌"</div></li>
+                                <li><div class="title">2015年 羊城晚报"岭南教育(最受学生喜爱在线教育平台)金鼎奖"</div></li>
+                                <!--<li><div class="title"><a href="">调用金口碑10篇文章展示，4列三行，标题限制20字内</a></div></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="jinkoubei">
+                            <img src="/assets/images/img_diploma.png" class="img-responsive" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row service-range">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 service-range-title"><div>选师无忧&bull;服务范围</div></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 service-range-content"><img src="/assets/images/img_map.png" class="img-responsive" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 meiti-baodao-title"><div>选师无忧&bull;数十家媒体专业报道</div></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center meiti-baodao">
+                        <ul>
+                            <li><img src="/assets/images/img_logo1.png" /></li>
+                            <li><img src="/assets/images/img_logo2.png" /></li>
+                            <li><img src="/assets/images/img_logo3.png" /></li>
+                            <li><img src="/assets/images/img_logo4.png" /></li>
+                            <li><img src="/assets/images/img_logo5.png" /></li>
+                            <li><img src="/assets/images/img_logo6.png" /></li>
+                            <li><img src="/assets/images/img_logo7.png" /></li>
+                            <li><img src="/assets/images/img_logo8.png" /></li>
+                            <li><img src="/assets/images/img_logo9.png" /></li>
+                            <li><img src="/assets/images/img_logo10.png" /></li>
+                            <li><img src="/assets/images/img_logo11.png" /></li>
+                            <li><img src="/assets/images/img_logo12.png" /></li>
+                            <li><img src="/assets/images/img_logo13.png" /></li>
+                            <li><img src="/assets/images/img_logo14.png" /></li>
+                            <!--li><img src="/assets/images/img_logo15.png" /></li-->
+                            <li><img src="/assets/images/img_logo16.png" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <%- include('footer') -%>
+
+    <script type="text/javascript" src="/assets/javascripts/jquery.roundabout.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var speed = 66;
+            var design = document.getElementById("design");
+            var design1 = document.getElementById("design1");
+            var design2 = document.getElementById("design2");
+
+            design2.innerHTML = design1.innerHTML;
+
+            function Marquee(){
+                if(design2.offsetTop - design.scrollTop <= 0){
+                    design.scrollTop -= design1.offsetHeight;
+                }
+                else{
+                    design.scrollTop++;
+                }
+            }
+
+            var MyMarquee = setInterval(Marquee, speed);
+
+            design.onmouseover = function(){
+                clearInterval(MyMarquee);
+            }
+
+            design.onmouseout = function(){
+                MyMarquee = setInterval(Marquee, speed);
+            }
+            $(".xuexileyuan-left ul li").hover(function() {
+                var img1 = $(this).find('img:first');
+                var img2 = $(this).find('img:last');
+                img1.hide();
+                img2.show();
+            }, function () {
+                var img1 = $(this).find('img:first');
+                var img2 = $(this).find('img:last');
+                console.log(img1, img1.attr('src'));
+                img2.hide();
+                img1.show();
+            });
+
+            $('#myRoundabout').roundabout({
+                shape: 'figure8',
+                minOpacity: 1,
+                minOpacity: 0.4,
+                maxOpacity: 1.0,
+                //autoplay: true,
+                autoplayDuration: 4000,
+                autoplayInitialDelay: 2000,
+                //autoplayPauseOnHover: true
+            });
+        });
+    </script>
+<%- include('page-bottom') -%>
+

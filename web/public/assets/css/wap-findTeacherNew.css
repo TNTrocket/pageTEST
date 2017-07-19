@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+body{background: #fff;}
+.topbox{padding:0.36em 0.4em;overflow: hidden;}
+.topbox .logo{float: left;width: 4.92em;}
+.topbox .logo img{display: block;width: 100%;}
+.topbox .telbox{float: right;line-height: 1.4em;overflow: hidden;}
+.topbox .telbox img{width: 1.06em;height: auto;display: block;float: left;margin:0.16em 0 0 0.32em;}
+.topbox .telbox span{font-size: 0.6em;color: #ff642d;font-weight: bold;float: left;}
+.banner{display: block;width: 100%;height: auto;}
+.partone{padding: 0 0.4em;overflow: hidden;}
+.title{font-size: 0.68em;line-height: 3.18em;color: #333;text-align: center;}
+.partone input{width: 100%;height:3.21em;font-size: 0.56em;border: 1px solid #dad9d7;border-radius: 0.18em;padding: 0 0.71em;margin-bottom: 1.07em;background: none;}
+.partone .error{font-size: 0.48em;color: #a3a3a1;text-align: center;line-height: 1em;padding-bottom: 1.25em;}
+.btn{font-size: 0.68em;width: 100%;border: 1px solid #000;border-radius: 0.15em;margin-bottom: 1.06em;display: block;text-align: center;line-height: 2.62em;}
+.submitbtn{color: #fe555a;border-color: #fe555a;}
+.parttwo{position: relative;z-index: 0; }
+.parttwo .title{position: absolute;width: 100%;top: 0;left:0;}
+.parttwo img{display: block;width: 100%;height: auto;}
+.partthree{background: #eff3f6;overflow: hidden;padding: 0 0.4em;}
+.partthree .tablebox{overflow: hidden;border-radius: 0.16em;margin-bottom: 0.74em;}
+.partthree .tablebox table{font-size: 0.52em;width: 100%;border-top: 0;}
+.partthree .tablebox table tr:nth-child(1){border:0;}
+.partthree .tablebox table tr:nth-child(2) td{border-top: 0;}
+.partthree .tablebox th{font-weight: normal;background: #39d58c;color: #fff;line-height: 3.54em;border:0;}
+.partthree .tablebox td{text-align: center;background: #fff;line-height: 2.65em;}
+.getscorebtn{color: #2295f2;border-color: #2295f2;}
+.partfour{overflow: hidden;}
+.advantages{padding-left: 0.4em;overflow: hidden;margin-bottom: 0.32em;}
+.advantages li{width:50%;padding: 0 0.4em 0.4em 0;float: left;}
+.advantage{padding: 0.58em 0.4em;background: #eff3f6;}
+.advantage .td03{width: 2.12em;}
+.advantage .td03 img{width: 100%;}
+.advantage .td01{font-size: 0.56em;}
+.advantage .td02{font-size: 0.44em;color: #666;}
+.advantages li:nth-child(1) .td01{color: #2295f2;}
+.advantages li:nth-child(2) .td01{color: #39d58c;}
+.advantages li:nth-child(3) .td01{color: #f69007;}
+.advantages li:nth-child(4) .td01{color: #ff5d5e;}
+.btnbox{padding: 0 0.4em;}
+.getmoredetailbtn{color: #ff8c0b;border-color: #ff8c0b;}
+.partfive{background: url(../img/wx72.jpg) no-repeat;background-size: 100% 100%;padding: 0 0.4em;}
+.quality{padding-left: 0.68em;color: #000;}
+.quality li{font-size: 0.52em;line-height: 1.54em;list-style:decimal outside;}
+.quality li span{color: #fe555a;font-weight: bold;}
+.honorphoto{overflow: hidden;padding: 0.22em 0.26em 0.48em 0.64em;}
+.honorphoto .left{float: left;display: block;width: 36.48%;height: auto;}
+.honorphoto .right{float: right;display: block;width: 32.96%;height: auto;}
+.partsix{overflow: hidden;padding: 0 0.4em;}
+.partsix img{display: block;width: 83.66%;margin: 0 auto 0.84em;}
+.findteacherbtn{color: #39d58c;border-color: #39d58c;}
+.partseven{width: 100%;background: url(../img/wx73.jpg) no-repeat;background-size: 100% 100%;padding: 0 0.4em;}
+.partsevencon{display: table-row;}
+.partseven .left{display: table-cell;padding-bottom: 0.4em;}
+.partseven .right{display: table-cell;width: 3.54em;vertical-align: middle;}
+.title2{font-size: 0.72em;line-height: 3em;color: #fff;}
+.partseven input{font-size: 0.56em;width: 73.73%;height: 2.71em;background: none;border: 1px solid #f0f0f0;color: #f0f0f0;padding: 0 0.71em;margin-bottom: 0.93em;}
+.joinusbtn{width: 3.54em;height: 3.54em;background: #39d58c;border-radius: 50%;overflow: hidden;border: 0.24em solid #6ddec0;font-size: 1em;color: #fff;text-align: center;}
+.joinusbtn span{font-size: 0.72em;line-height: 1.71em;}
+.bottombox{padding: 0.44em 14.13%;overflow: hidden;}
+.bottombox .logo{float: left;}
+.bottombox .logo img{display: block;width: 2.26em;height: auto;}
+.bottombox .right{float: right;padding-top: 0.14em;}
+.bottombox .telbox{float: right;line-height: 1.4em;overflow: hidden;}
+.bottombox .telbox img{width: 1.06em;height: auto;display: block;float: left;margin:0.16em 0.32em 0 0;}
+.bottombox .telbox span{font-size: 0.6em;color: #ff642d;float: left;}
+.time{font-size: 0.48em;color: #999;}
+.Shangwutong{bottom:20em;}

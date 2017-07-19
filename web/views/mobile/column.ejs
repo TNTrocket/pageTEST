@@ -1,0 +1,30 @@
+<%- include('header') -%>
+	
+	<%- include('top') -%>
+
+	<%- include('menu') -%>
+ 
+	<%- include('sub-menu') -%>
+
+	<div class="itemtitle"><span>|</span><%= column.name %></div>
+	<div class="allitems">
+		<% articleList.map(function (item) { %>
+			<a href="<%= item.route %>">
+				<table width="100%">
+					<tr>
+						<th>
+							<div class="thumbnail">
+								<img src="<%= item.image %>" />
+							</div>
+						</th>
+						<td><%= item.title %></td>
+					</tr>
+				</table>
+			</a>
+		<%	}) %>
+	</div>
+
+
+	<%- include('public') -%>
+
+<%- include('footer') -%>

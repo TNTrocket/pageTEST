@@ -1,0 +1,31 @@
+<%- include('header') -%>
+	
+	<%- include('top') -%>
+
+	<%- include('menu') -%>
+ 
+	<%- include('sub-menu') -%>
+
+	<div class="sectiontitle"><span>|</span><%= article ? article.title : '' %></div>
+	<div class="article">
+		<%- article ? article.content : '未查询到相关数据' %>
+		<div class="articlemessage">
+			<span>作者：<%= article ? article.author : '' %></span>
+			<span>来源：<%= article ? article.source : '' %></span>
+			<span>更新时间：<%= article ? article.publish_date: '' %></span>
+		</div>
+	</div>
+	<div class="bannerpaddingbox">
+		<a href=""><img src="/assets/img/wap36.jpg"></a>
+		<a href=""><img src="/assets/img/wap37.jpg"></a>
+	</div>
+	<div class="sectiontitle"><span>|</span>相关文章</div>
+	<ul class="linkallarticles">
+		<% relatedArticleList.map(function (item) { %>
+			<li><a href="<%= item.route %>"><%= item.title %></a></li>
+		<%	}) %>
+	</ul>
+
+	<%- include('public') -%>
+
+<%- include('footer') -%>

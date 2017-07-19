@@ -1,0 +1,18 @@
+@charset "UTF-8";
+body{padding-bottom: 2em;}
+.bannerbox{padding: 0.6em 0.4em 0.2em 0.4em;background: #fff;overflow: hidden;border-top: 1px solid #eaeaec;border-bottom: 1px solid #eaeaec;}
+.bannerbox a{display: block;margin-bottom: 0.4em;}
+.bannerbox a img{display: block;width: 100%;height: auto;}
+.companyintroduction{background: #fff;padding: 0.6em 0.4em 0.5em 0.4em;border-top: 1px solid #eaeaec;border-bottom: 1px solid #eaeaec;margin: 0.6em 0;}
+.companyintroduction img{display: block;width: 100%;height: auto;margin-bottom: 0.5em;}
+.companyintroduction p{font-size: 0.56em;line-height: 1.29em;color: #999;text-indent: 2em;}
+.mapboxout{background: #fff;padding: 0.6em 0.4em 0.5em 0.4em;border-top: 1px solid #eaeaec;border-bottom: 1px solid #eaeaec;margin: 0.6em 0;}
+.mapbox{width: 100%;height: 10.6em;margin-bottom: 0.34em;}
+.mapboxout li{font-size: 0.56em;line-height: 1.29em;color: #999;}
+.sectiontitle{font-size: 0.64em;line-height: 2.75em;padding: 0 0.625em;border-bottom: 1px solid #eaeaec;}
+.sectiontitle span{color: #fdb519;padding-right: 0.41em;}
+.linkallarticles{padding-left: 0.4em;background: #fff;border-bottom: 1px solid #eaeaec;}
+
+.linkallarticles li{color: #2eb3ff;list-style: inside disc;font-size: 0.56em;line-height: 1.5em;padding: 0.82em 0.71em 0.82em 0;border-bottom: 1px solid #eaeaec;}
+.linkallarticles li:last-child{border-bottom: 0;}
+.linkallarticles li a{color: #333;}

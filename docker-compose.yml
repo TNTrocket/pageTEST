@@ -1,0 +1,26 @@
+version: '2'
+services:
+  mysql:
+    tty: true
+    build: dockers/mysql/
+    environment:
+      - MYSQL_ROOT_PASSWORD=qwer1234
+      - MYSQL_DATABASE=xswy
+    volumes:
+      - ./DB:/docker-entrypoint-initdb.d
+  node-admin:
+    tty: true
+    build: dockers/node/
+    restart: always
+    volumes:
+      - ./admin:/usr/src/app
+    ports:
+      - "127.0.0.1:3000:3000"
+  node-web:
+    tty: true
+    build: dockers/node/
+    restart: always
+    volumes:
+      - ./web:/usr/src/app
+    ports:
+      - "127.0.0.1:3001:3001"

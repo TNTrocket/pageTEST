@@ -1,0 +1,46 @@
+<!--公用浮窗和弹窗部分-->
+<div class="fixedrightbox">
+	<a href="http://pkt.zoosnet.net/LR/Chatpre.aspx?id=PKT51831902&lng=cn#sem" class="onlineservice"><img src="/assets/img/wap3.png"></a>
+	<a href="<%= findTeacher.route %>" class="collectinformationbtn"><img src="/assets/img/wap31.png" ></a>
+	<a href="http://gz.51xuanshi.com/mobile/download" class="collectinformationbtn"><img src="/assets/img/dl.png" ></a>
+	<!--a href="javascript:;" class="download" target="_blank" class="collectinformationbtn"><img src="/assets/img/dl.png" ></a-->
+	<!--a href="https://itunes.apple.com/cn/app/xuan-shi-wu-you/id1032937897?mt=8" target="_blank" class="collectinformationbtn"><img src="/assets/img/dl.png" ></a-->
+	<a class="backtop"><img src="/assets/img/wap46.png"></a>
+</div>
+<!--<div class="informationwindowout">
+	<div class="informationwindow">
+		<div class="informationwindowcon">
+			<div class="title">立即预约免费听课</div>
+			<div class="bookednumble">本周已有<span>45685</span>人预约</div>
+			<input type="text" placeholder="填写姓名（必填）">
+			<input type="text" placeholder="填写手机（必填）">
+			<input type="text" placeholder="区域例：天河区">
+			<button class="submitbtn">确认提交</button>
+		</div>
+	</div>
+</div>-->
+<img src="/assets/img/wap32.png" class="appointmentsuccess">
+<div class="bg"></div>
+<!--公用浮窗和弹窗部分-->
+<script type="text/javascript">
+$('.download').click(function (){
+   var idx = navigator.userAgent.indexOf('iPhone');
+   if (idx != -1) {
+	window.open("https://itunes.apple.com/cn/app/xuan-shi-wu-you/id1032937897?mt=8");
+        return;
+   }
+   idx = navigator.userAgent.indexOf('iPad');
+   if (idx != -1) {
+	window.open("https://itunes.apple.com/cn/app/xuan-shi-wu-you/id1032937897?mt=8");
+        return;
+   }
+   idx = navigator.userAgent.indexOf('Android');
+   if (idx != -1) {
+	window.open("http://51xuanshi.com/app/GetAndroidAPK?type=3");
+        return;
+   }
+   else {
+	alert("抱歉，暂不支持此系统");
+   }
+})
+</script>

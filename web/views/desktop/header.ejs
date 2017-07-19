@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title><%= seoTitle || title %></title>
+    <meta name="keywords" content="<%= keywords %>">
+    <meta name="baidu-site-verification" content="QTxSTuJiJp" /> 
+    <meta name="description" itemprop="description" content="<%= description %>">
+    
+    <link rel="stylesheet" href="/assets/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/assets/stylesheets/style.css">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="/assets/javascripts/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/assets/javascripts/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=hvwjGORAmnQyR2AfGMdhOC2F"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/assets/javascripts/html5shiv.min.js"></script>
+    <script src="/assets/javascripts/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="FloatingWindow">
+  <div class="onlineServiceBtn" tenantid="1559">
+      <a href="http://pkt.zoosnet.net/LR/Chatpre.aspx?id=PKT51831902&amp;lng=cn" target="_blank">
+          <img src="/assets/images/kefu.png">
+          <p>在线客服</p>
+      </a>
+  </div>
+  <div class="attentionUs">
+      <img src="/assets/images/guanzhu.png">
+      <img src="/assets/images/2code.jpg" class="twocode" />
+
+      <p>关注我们</p>
+  </div>
+  <div class="gdownload">
+      <a href="http://gz.51xuanshi.com/appxiazai" target="_blank"><img src="/assets/images/download.png" /></a>
+      <p>APP下载</p>
+  </div>
+</div>
+
+<div class="bottomSearchBox">
+    <table>
+        <tbody><tr>
+            <td class="td1">10000+专职老师短期快速提分</td>
+            <td><input type="text" name="realname" placeholder="输入您的姓名"></td>
+            <td><input type="text" name="phone" placeholder="输入您的手机号"></td>
+            <td><input type="text" name="course" placeholder="城市区域(例：广州海珠区)"></td>
+            <td class="td5"><button class="immediateReservation">立即预约</button></td>
+        </tr>
+    </tbody></table>
+</div>
+
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container">
+                <div class="row header">
+                    <div class="col-md-3">
+                        <div class="logo">
+                            <a href="/"><img src="/assets/images/logo.png" /></a>
+                        </div>
+                        <div class="location" id="locationCity" onclick="$('#myCityModal').modal('show');"><span><%= currentCity.name %></span><img src="/assets/images/ic_arrow.png" /></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div>
+                            <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-search" type="button">搜索</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="login-register pull-right"><a href="/denglu">登录</a><span>|</span><a href="/zhuce">注册</a></div>
+                        <ul class="pull-right guarantee">
+                            <li><img src="/assets/images/ic_authentication.png" />官方认证</li>
+                            <li><img src="/assets/images/ic_refund.png" />随时退款</li>
+                            <li><img src="/assets/images/ic_pay.png" />支付担保</li>
+                        </ul>
+                        <div class="tel pull-right"><img src="/assets/images/ic_phone.png" /><span>400-612-5351</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row nav-row">
+            <div class="container">
+                <div class="row">
+                    <ul class="nav nav-justified nav-justified-xs">
+                        <li class="dropdown all-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">全部课堂 <img src="/assets/images/pc9.png" /> </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <% webAllColumns.map(function (item) { %>
+                                    <li>
+                                        <div class="title"><img src="/assets/images/ic_grade.png" /> <%= item.name %></div>
+                                        <ul class="second-menu">
+                                            <% item.childColumns.map(function (secondItem) { %>
+                                                <li><a href="<%= secondItem.route %>"><%= secondItem.name %></a></li>
+                                            <%  }) %>
+                                        </ul>
+                                        <div style="clear:both"></div>
+                                        <div class="third-menu">
+                                            <% item.childColumns.map(function (secondItem) { %>                                                
+                                                <div>
+                                                    <div class="title"><%= secondItem.name %></div>
+                                                    <div class="menu-list">
+                                                        <ul>                                                        
+                                                            <% if(secondItem.childColumns) secondItem.childColumns.map(function (thirdChildItem) { %>
+                                                                <li><a href="<%= thirdChildItem.route %>"><%= thirdChildItem.name %></a></li>
+                                                            <%  }) %>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            <%  }) %>
+                                        </div>
+                                    </li>
+                                <%  }) %>
+                            </ul>
+                        </li>
+                        <li><a href="/">首页</a></li>
+                        <% webTopColumns.map(function (item) { %>
+                            <% if(item.childColumns.length > 0) { %>
+                                <li class="dropdown nav-submenu">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= item.name %></a>
+                                    <div class="dropdown-menu dropdown-menu-xs" role="menu">
+                                        <ul>
+                                            <% item.childColumns.map(function (secondItem) { %>
+                                                <li><a href="<%= secondItem.route %>"><%= secondItem.name %></a></li>
+                                            <%  }) %>
+                                             <li><a href="http://m.51xuanshi.com/">升学资讯</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            <%  } else{ %>
+                        <li><a href="http://waijiao.51xuanshi.com/?channel=xswy" target="_blank">无忧外教</a></li>
+                                <li><a href="<%= item.route %>"><%= item.name %></a></li>
+                            <%  } %>                            
+                        <%  }) %>                        
+                    </ul>
+                </div>
+            </div>            
+        </div>
+

@@ -1,0 +1,40 @@
+<%- include('header') -%>
+        
+    <div class="row zhaohuimima">
+        <div class="col-md-12">
+            <div class="zhaohuimima-box-fade"></div>
+            <div class="zhaohuimima-box">
+                <div><img src="/assets/images/third-edition-icon18.png" /></div> 
+                <div class="zhaohuimima-form">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phone" placeholder="请输入手机号">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-7"><input type="text" class="form-control" id="captcha_web" placeholder="验证码"></div>
+                                <div class="col-md-5"><img id="captcha_web_image" src="http://www.51xuanshi.com/web/account/captcha/v/57df495b3a4e4.html" alt="" /></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-7"><input type="text" class="form-control" id="captcha_sms" placeholder="短信验证码"></div>
+                                <div class="col-md-5"><button type="submit" class="btn btn-default">获取验证码</button></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="6~16位新密码">
+                        </div>    
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="确认密码">
+                        </div>
+                        <button type="submit" class="btn btn-search">提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer') -%>
+<%- include('page-bottom') -%>
+

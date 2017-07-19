@@ -1,0 +1,58 @@
+<%- include('header') -%>
+	
+	<%- include('top') -%>
+
+	<%- include('menu') -%>
+ 
+	<%- include('sub-menu') -%>
+	
+	<a class="bannerbox" href="">
+		<img src="/assets/img/wap33.jpg" class="banner">
+	</a>
+
+	<div class="sectiontitle"><span>|</span>提分案例</div>
+	<div class="case">
+		<img src="/assets/img/wap34.jpg" class="chartimg">
+		<div class="chartillustrate">2016广州选师无忧学院成绩比例图</div>
+		<ul>
+			<li><img src="/assets/img/wap35.png"><span>高考最高提高303分，文理科学生600+分数达773人</span></li>
+			<li><img src="/assets/img/wap35.png"><span>高考本科上线率达90%</span></li>
+			<li><img src="/assets/img/wap35.png"><span>81%高考生成绩涨幅50+分数</span></li>
+			<li><img src="/assets/img/wap35.png"><span>88%初三学员考入区重点及以上级别高中</span></li>
+			<li><img src="/assets/img/wap35.png"><span>512人中考成绩523+分数</span></li>
+			<li><img src="/assets/img/wap35.png"><span>96%无忧学员单科成绩提分30-100分</span></li>
+		</ul>
+	</div>
+	<div class="sectiontitle"><span>|</span>近期无忧优秀学院名单</div>
+	<div class="studentlistbox">
+		<table width="100%" border="1" borderColor="#eaeaec">
+			<tr>
+				<th>姓名</th>
+				<th>辅导科目</th>
+				<th>辅导前</th>
+				<th>辅导后</th>
+				<th>提分</th>
+			</tr>
+			<% student.map(function (item) { %>
+				<tr>
+					<td><%= item.name %></td>
+					<td><%= item.subject %></td>
+					<td><%= item.tutor_before %></td>
+					<td><%= item.tutor_after %></td>
+					<td><%= (item.tutor_after - item.tutor_before) %></td>
+				</tr>
+			<%	}) %>
+		</table>
+	</div>
+	<div class="parentfeedback">
+		<div class="sectiontitle"><span>|</span>家长反馈</div>
+		<ul>
+			<% jiazhangfankui.map(function (item) { %>
+				<li><img src="<%= item.image %>" alt="<%= item.title %>" /></li>
+			<%	}) %>
+		</ul>
+	</div>
+
+	<%- include('public') -%>
+
+<%- include('footer') -%>

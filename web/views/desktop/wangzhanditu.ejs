@@ -1,0 +1,126 @@
+<%- include('header') -%>
+
+    <%- include('page-banner') -%>
+
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 web-map">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">网站地图</div>
+                        <div class="panel-body">
+                            <div class="first-column">[地方站点]</div>
+                            <ul class="second-column-list">     
+                                <li>
+                                    <div class="second-column-item"><a href="javasctipt:void(0)">已开通城市</a></div>
+                                    <div class="third-column">
+                                        <ul class="third-column-list">
+                                            <% cityList.map(function (item) { %>
+                                                <% if(item.opened == '1'){ %>
+                                                <li><a href="http://<%= item.pinyin %>.51xuanshi.com" target="_blank"><%= item.name %></a></li>
+                                                <% } %>
+                                            <%  }) %>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <% webAllColumns.map(function (item) { %>
+                                <div class="first-column">[<a href="<%= item.route %>" target="_blank"><%= item.name %></a>]</div>
+                                <ul class="second-column-list">
+                                    <% item.childColumns.map(function (secondItem) { %>
+                                        <li>
+                                            <div class="second-column-item"><a href="<%= secondItem.route %>" target="_blank"><%= secondItem.name %></a></div>
+                                            <div class="third-column">
+                                                <ul class="third-column-list">
+                                                    <% if(secondItem.childColumns) secondItem.childColumns.map(function (thirdChildItem) { %>
+                                                        <li><a href="<%= thirdChildItem.route %>" target="_blank"><%= thirdChildItem.name %></a></li>
+                                                    <%  }) %>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    <%  }) %>
+                                </ul>
+                            <%  }) %>                            
+
+                            <div class="first-column">[科目导航]</div>
+                            <ul class="second-column-list">     
+                                <li>
+                                    <div class="second-column-item"><a href="javasctipt:void(0)">科目</a></div>
+                                    <div class="third-column">
+                                        <ul class="third-column-list">
+                                            <li><a href="/yuwen" target="_blank">语文</a></li>
+                                            <li><a href="/shuxue" target="_blank">数学</a></li>
+                                            <li><a href="/yingyu" target="_blank">英语</a></li>
+                                            <li><a href="/wuli" target="_blank">物理</a></li>
+                                            <li><a href="/huaxue" target="_blank">化学</a></li>
+                                            <li><a href="/shengwu" target="_blank">生物</a></li>
+                                            <li><a href="/zhengzhi" target="_blank">政治</a></li>
+                                            <li><a href="/lishi" target="_blank">历史</a></li>
+                                            <li><a href="/dili" target="_blank">地理</a></li>
+                                            <li><a href="/gaozhongfudao/lizong" target="_blank">理综</a></li>
+                                            <li><a href="/gaozhongfudao/wenzong" target="_blank">文综</a></li>
+                                            <li><a href="/xiaoxuefudao/aoshu" target="_blank">奥数</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="first-column">[<%= webTopColumns[0].name %>]</div>
+                            <ul class="second-column-list">     
+                                <li>
+                                    <div class="second-column-item"><a href="<%= webTopColumns[0].route %>" target="_blank"><%= webTopColumns[0].name %></a></div>
+                                    <div class="third-column">
+                                        <ul class="third-column-list">
+                                            <% webTopColumns[0].childColumns.map(function (item) { %>
+                                                <li><a href="<%= item.route %>" target="_blank"><%= item.name %></a></li>
+                                            <%  }) %>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="first-column">[<%= webTopColumns[1].name %>]</div>
+                            <ul class="second-column-list">     
+                                <li>
+                                    <div class="second-column-item"><a href="<%= webTopColumns[1].route %>" target="_blank"><%= webTopColumns[1].name %></a></div>
+                                    <div class="third-column">
+                                        <ul class="third-column-list">
+                                            <% webTopColumns[1].childColumns.map(function (item) { %>
+                                                <li><a href="<%= item.route %>" target="_blank"><%= item.name %></a></li>
+                                            <%  }) %>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="first-column">[<%= webTopColumns[2].name %>]</div>
+                            <ul class="second-column-list">     
+                                <li>
+                                    <div class="second-column-item"><a href="<%= webTopColumns[2].route %>" target="_blank"><%= webTopColumns[2].name %></a></div>
+                                    <div class="third-column">
+                                        <ul class="third-column-list">
+                                            <li><a href="/lianxiwomen" target="_blank">联系我们</a></li>
+                                            <li><a href="/shiyongliucheng" target="_blank">使用流程</a></li>
+                                            <li><a href="/wuyoujianjie" target="_blank">无忧简介</a></li>
+                                            <li><a href="/appxiazai" target="_blank">APP下载</a></li>
+                                            <li><a href="/denglu" target="_blank">登录</a></li>
+                                            <li><a href="/zhuce" target="_blank">注册</a></li>
+                                            <li><a href="<%= online.route %>" target="_blank">家长帮助</a></li>
+                                            <li><a href="javasctipt:void(0)" onclick="$('#myLinksModal').modal('show');">友情链接</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <%- include('footer') -%>
+    
+<%- include('page-bottom') -%>
+

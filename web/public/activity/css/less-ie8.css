@@ -1,0 +1,51 @@
+
+.invest-row{
+    left: 0%;
+    position: relative;
+    margin: 0 auto;
+}
+.invest-row-detail{
+    position: relative;
+    left: 7.5%;
+    width: 100%;
+}
+
+.cut-line{
+    display: inline-block;
+    width: 75px;
+    position: relative;
+    left: 46.8%;
+    top: -15px;
+    color: #1795fb;
+    background-color: #1795fb;
+    height: 4px;
+    border: none;
+}
+
+.market-item-content{
+    width: 100%;
+    /*height: 1.5rem;*/
+    position: relative;
+    left: 0%;
+    top: 23%;
+}
+
+.xs51-service-title{
+    position: relative;
+    left: 25%;
+}
+
+.market-item::after{
+    content: ' ';
+    display: block;
+}
+
+.cooperate-item{
+	margin-right: 65px;
+}
+
+.apply-entry{
+    background-position: center center;
+    height: 389px;
+    height: 4.22rem;
+}

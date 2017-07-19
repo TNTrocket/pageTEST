@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.itemtitle{font-size: 0.64em;line-height: 2.75em;padding: 0 0.625em;}
+.itemtitle span{color: #2eb3ff;padding-right: 0.41em;}
+.allitems{background: #fff;border-top: 1px solid #eaeaec;border-bottom: 1px solid #eaeaec;padding: 0 0.4em;margin-bottom: 2em;}
+.allitems a{display: block;padding: 0.6em 0;border-bottom: 1px solid #eaeaec;}
+.allitems a:last-child{border-bottom: 0;}
+.allitems th{width: 2.4em;}
+.allitems .thumbnail{width: 2em;height: 2em;background: #eaeaec;border-radius: 0.16em;overflow: hidden;}
+.allitems .thumbnail img{display: block;width: 100%;height: auto;}
+.allitems td{font-size: 0.64em;color: #333;}

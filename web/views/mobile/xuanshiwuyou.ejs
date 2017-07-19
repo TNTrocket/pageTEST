@@ -1,0 +1,29 @@
+<%- include('header') -%>
+    
+    <%- include('top') -%>
+
+    <%- include('menu') -%>
+ 
+    <%- include('sub-menu') -%>
+
+    <div class="companyintroduction">
+        <img src="/assets/img/wap45.jpg">
+        <p>选师无忧是由广州市熙励教育信息咨询有限公司（熙励师范家教）研发的互联网O2O教育服务平台。基于13年的k12线下经验和对超过11万名家长老师群体的服务以及观察分析，与互联网专业人士一起打造的一款颠覆传统家教教育的产品。教学过程公开透明不收费任何中介费用，通过免除中介费用，让老师赚钱更多的收入，让学生花更少的钱享受更好的教育。让老师找到合适的平台，让学生找的合适的好老师。</p>
+    </div>
+        
+        
+    <div class="bannerpaddingbox">
+        <a href=""><img src="/assets/img/wap36.jpg"></a>
+        <a href=""><img src="/assets/img/wap37.jpg"></a>
+    </div>
+    <div class="sectiontitle"><span>|</span>相关文章</div>
+    <ul class="linkallarticles">
+        <% relatedArticleList.map(function (item) { %>
+            <li><a href="<%= item.route %>"><%= item.title %></a></li>
+        <%  }) %>
+    </ul>
+    
+
+    <%- include('public') -%>
+
+<%- include('footer') -%>

@@ -1,0 +1,28 @@
+<%- include('header') -%>
+	
+	<%- include('top') -%>
+
+	<%- include('menu') -%>
+ 
+	<%- include('sub-menu') -%>
+	
+	<% child_column.map(function (item) { %>
+		<%- include('panel-header', {itemTitle: item.name, itemUrl: item.newRoute}) -%>
+		<div class="allitems" id="childColumnItems_<%= item.id %>">
+			<div><img src="/assets/img/loading.gif" /></div>
+		</div>
+
+		<script type="text/javascript">			
+			$(function () {
+				var column_id = <%= item.id %>;
+				var city_id  = <%= city_id %>;
+				getArticleList({'column_id': column_id}, 'childColumnItems_' + column_id);
+			});
+		</script>
+
+	<%	}) %>
+
+
+	<%- include('public') -%>
+
+<%- include('footer') -%>

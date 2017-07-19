@@ -1,0 +1,20 @@
+.inline-item{
+    display: inline-block;
+}
+
+.inline-item{
+    display: inline;
+}
+
+
+.cooperate-item{
+    display: inline-block;
+}
+.cooperate-item{
+    display: inline;
+}
+
+.cut-line{
+    top: -2px;
+    left: 45%;
+}

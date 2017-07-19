@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= title %></title>
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
+		<script src="/javascripts/jquery.min.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1><%= title %></h1>
+		<p>Welcome to <%= title %></p>
+		<p><b>这是电脑版页面</b></p>
+		<p>测试网页版定位</p>
+
+		<script type="text/javascript">
+			if (window.navigator.geolocation) {
+				var options = {
+				enableHighAccuracy: true,
+				};
+				window.navigator.geolocation.getCurrentPosition(function (position) {
+					document.write("<p>position:</p>" + JSON.stringify(position));
+					//console.log(position);
+					document.write("<p>position.coords:</p>" + JSON.stringify(position.coords));
+					
+					var lat = position.coords.latitude;
+					var lon = position.coords.longitude;
+
+
+					var point = new BMap.Point(lon, lat);  // 创建坐标点
+
+					document.write("<p>point:</p>" + JSON.stringify(point));
+
+					var myGeo = new BMap.Geocoder();// 根据坐标得到地址描述
+
+					document.write("<p>myGeo:</p>" + JSON.stringify(myGeo));
+
+					myGeo.getLocation(point, function (result) {
+						document.write("<p>result:</p>" + JSON.stringify(result));
+
+						var city = result.addressComponents.city;
+						document.write("<p>当前城市是：<b>" + city + "</b></p>");
+						//$('body').html($('body').html() + "<p>当前城市是：<b>" + city + "</b></p>")
+					});
+				});
+				//window.navigator.geolocation.getCurrentPosition(handleSuccess, handleError, options);
+			} else {
+				alert("浏览器不支持html5来获取地理位置信息");
+			}
+		</script>
+
+	</body>
+</html>

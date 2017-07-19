@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+.header-out{width:100%;position:fixed;top:0;}
+.bannerOut{overflow:hidden;height:556px;background:url('../images/third-edition-bg19.jpg') no-repeat center top;}
+.banner{width:930px;padding-top:156px;margin:0 auto;color:#fff;background:none;}
+.advertising{font-size:60px;font-weight:bold;line-height:121px;}
+.propaganda{font-size:30px;line-height:52px;}
+.sectionOneOut{overflow:hidden;background:#fff;padding:116px 0;}
+.sectionTwoOut{overflow:hidden;background:#efefef;padding:116px 0;}
+.sectionOut{overflow:hidden;background:#efefef;padding-bottom:72px;}
+.section{width:930px;overflow:hidden;margin:0 auto;}
+.sectionOneOut .content{float:left;}
+.sectionOneOut img{float:right;}
+.sectionTwoOut .content{float:right;}
+.sectionTwoOut img{float:left;}
+.content{padding-top:22px;}
+.content .title{font-size:30px;line-height:91px;color:#333;}
+.content .detail{font-size:20px;line-height:38px;color:#666;}
+.content .detail span{font-size:28px;}
+.sectionOut .title{font-size:36px;line-height:120px;color:#333;text-align:center;}
+.sectionOut ul{width:930px;overflow:hidden;margin:0 auto;background:url('../images/third-edition-bg23.jpg') no-repeat left top;padding-top:111px;}
+.sectionOut ul li{width:25%;float:left;}
+h3{font-size:24px;font-weight:bold;text-align:center;line-height:98px;}
+.sectionOut ul li p{font-size:14px;line-height:24px;color:#818181;padding:0 11px 0 16px;}
+.sectionThreeOut{background:url('../images/third-edition-bg3.jpg') no-repeat center top;overflow:hidden;padding-top:6px;text-align:center;}
+.sectionThree{width:1000px;overflow:hidden;margin:0 auto;color:#fff;}
+.guide{font-size:36px;line-height:175px;font-weight:bold;}
+.fastRegistration{width:338px;height:81px;background:;font-size:24px;line-height:79px;border:2px solid #fff;border-radius:41px;margin:0 auto;color:#fff;font-weight:bold;}
+.help{font-size:18px;line-height:158px;}
+.flowBoxOut{width:100%;height:96px;padding:18px 0;background:url('../images/third-edition-bg4.png');position:fixed;bottom:0;left:0;}
+.flowBox{width:930px;overflow:hidden;margin:0 auto;color:#fff;font-size:24px;}
+.statistics{line-height:60px;float:left;}
+.statistics span{margin-right:20px;}
+.statistics span font{color:#d15f1e;}
+.buttonBox{float:right;overflow:hidden;}
+.buttonBox a{display:block;width:165px;height:60px;background:#39adcd;border:2px solid #fff;border-radius:5px;float:left;margin-right:10px;}
+.buttonBox a img{float:left;margin-right:10px;margin-top:13px;}
+.buttonBox a p{float:left;color:#f5f5f5;line-height:56px;}
+.toLogin{padding-left:38px;}
+.beingTeacher{padding-left:14px;}
+.footer-out{height:230px;}

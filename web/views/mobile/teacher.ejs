@@ -1,0 +1,79 @@
+<%- include('header') -%>
+    
+    <%- include('top') -%>
+
+    <%- include('menu') -%>
+ 
+    <%- include('sub-menu') -%>
+
+    <div class="sectiontitle"><span>|</span><%= teacher ? teacher.nick_name : '' %></div>
+    <div class="teacher-info">
+        <%- teacher ? teacher.description : '未查询到相关数据' %>
+        <div class="teacher-message">
+            <span>作者：<%= teacher ? teacher.author : '' %></span>
+            <span>来源：<%= teacher ? teacher.source : '' %></span>
+            <span>更新时间：<%= teacher ? teacher.publish_date: '' %></span>
+        </div>
+    </div>
+    <div class="bannerpaddingbox">
+        <a href=""><img src="/assets/img/wap36.jpg"></a>
+        <a href=""><img src="/assets/img/wap37.jpg"></a>
+    </div>
+    <div class="sectiontitle"><span>|</span>星级老师</div>
+    <!--<div class="allteacherbox">
+        <% relatedTeacherList.map(function (item) { %>
+            <a href="<%= item.route %>" class="teacher">
+                <table width="100%">
+                    <tr>
+                        <th rowspan="2">
+                            <div class="facebox">
+                                <img src="<%= item.avatar %>" />
+                            </div>
+                        </th>
+                        <td class="introduce"><%= item.nick_name %>：<%= item.title %></td>
+                    </tr>
+                    <tr>
+                        <td class="teachingage"><%= item.teaching %>年教龄</td>
+                    </tr>
+                </table>
+                <ul class="authentication">
+                    <li><img src="/assets/img/wap25.png" /><span>教师认证</span></li>
+                    <li><img src="/assets/img/wap26.png" /><span>学历认证</span></li>
+                    <li><img src="/assets/img/wap27.png" /><span>资料认证</span></li>
+                    <li><img src="/assets/img/wap28.png" /><span>身份认证</span></li>
+                </ul>
+            </a>
+        <%  }) %>
+    </div>
+    -->
+    <div class="teacher-box">
+        <% relatedTeacherList.map(function (item) { %>
+            <a href="<%= item.route %>" class="teacher">
+                <table width="100%">
+                    <tr>
+                        <th rowspan="2">
+                            <div class="facebox">
+                                <img src="<%= item.avatar %>" />
+                            </div>
+                        </th>
+                        <td class="introduce">
+                            <div class="teacher-name">姓名: <%= item.nick_name %></div><div class="teachingage"><%= item.teaching %>年教龄</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="introduce"><%- item.title ? item.title : '&nbsp;' %></td>
+                    </tr>
+                </table>
+                <ul class="authentication1">
+                    <li><img src="/assets/img/wap51.png" /><div>教师认证</div></li>
+                    <li><img src="/assets/img/wap52.png" /><div>学历认证</div></li>
+                    <li><img src="/assets/img/wap53.png" /><div>资料认证</div></li>
+                    <li><img src="/assets/img/wap54.png" /><div>身份认证</div></li>
+                </ul>
+            </a>
+        <%  }) %>
+    </div>
+
+    <%- include('public') -%>
+
+<%- include('footer') -%>

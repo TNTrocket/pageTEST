@@ -1,0 +1,46 @@
+<%- include('header') -%>
+	
+	<%- include('top') -%>
+
+	<%- include('menu') -%>
+ 
+	<%- include('sub-menu') -%>
+
+
+	<div class="bannertitle">
+		<div class="left">
+			<img src="/assets/img/wap23.png">
+			<span>选师无忧</span>
+		</div>
+		<div class="center">
+			<span>|</span>中国实力教育辅导品牌
+		</div>
+	</div>	
+	<div class="bannerpaddingbox">
+		<a href=""><img src="/assets/img/wap30.jpg"></a>
+	</div>
+
+	<%- include('panel-header', {itemTitle: '高中提分技巧', itemUrl: '/tifenjiqiao/gaozhong'}) -%>
+	<div class="allitems">
+		<% gaozhongArticle.map(function (item) { %>
+			<a href="<%= item.route %>"><span><%= item.title %></span></a>
+		<%	}) %>
+	</div>
+
+	<%- include('panel-header', {itemTitle: '初中提分技巧', itemUrl: '/tifenjiqiao/chuzhong'}) -%>
+	<div class="allitems">
+		<% chuzhongArticle.map(function (item) { %>
+			<a href="<%= item.route %>"><span><%= item.title %></span></a>
+		<%	}) %>
+	</div>
+
+	<%- include('panel-header', {itemTitle: '小学提分技巧', itemUrl: '/tifenjiqiao/xiaoxue'}) -%>
+	<div class="allitems">
+		<% xiaoxueArticle.map(function (item) { %>
+			<a href="<%= item.route %>"><span><%= item.title %></span></a>
+		<%	}) %>
+	</div>
+
+	<%- include('public') -%>
+
+<%- include('footer') -%>

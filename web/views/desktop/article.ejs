@@ -1,0 +1,63 @@
+<%- include('header') -%>
+        
+<%- include('page-banner') -%>
+
+<div class="row">
+    <div class="container">
+        <div class="row subpage-content">
+            <div class="col-md-9">
+                <div class="row article-header">
+                    <div class="col-md-12">
+                        <div class="article-title"><%= article ? article.title : '' %></div>
+                        <div class="article-info">
+                            <span class="source">来源:<%= article ? article.source : '' %></span>
+                            <span class="date">日期:<%= article ? article.publish_date: '' %></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row article-content">
+                    <div class="col-md-12">
+                        <%- article ? article.content : '未查询到相关数据' %>
+                    </div>
+                </div>
+                <div class="row article-bottom">
+                    <div class="col-md-6">
+                        <div>
+                            上一篇:
+                            <% if(prevArticle) { %>
+                                <a href="<%= prevArticle.route %>"><%=  prevArticle.title %></a>
+                            <%  }else{ %>
+                                <span>没有了</span>
+                            <%  } %>
+                        </div>
+                        <div>
+                            下一篇:
+                            <% if(nextArticle) { %>
+                                <a href="<%= nextArticle.route %>"><%=  nextArticle.title %></a>
+                            <%  }else{ %>
+                                <span>没有了</span>
+                            <%  } %>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div><a href="<%= online.route %>" target="_blank"><img src="/assets/images/btn_online.png"></a></div>
+                        <div><a data-toggle="modal" data-target="#yuyueModal"><img src="/assets/images/btn_oder.png"></a></div>
+                    </div>
+                </div>
+                <div class="row article-tips">
+                    <div class="col-md-12">
+                        温馨提示：本站内容咨讯仅供参考，最终解释归属权属选师无忧。如何详细咨询可直接进入在线咨询，如客服忙线，可直接将问题留言，预约可直接登记信息，或拨打热线电话：<span>400-612-5351</span>
+                    </div>
+                </div>
+
+                        
+                <%- include('page-right') -%>
+
+
+<%- include('footer') -%>
+
+<script type="text/javascript">
+</script>
+
+<%- include('page-bottom') -%>
+

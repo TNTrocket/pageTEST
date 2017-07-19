@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.bannerbox{border-top: 1px solid #eaeaec;margin-top: 0.54em;display: block;}
+.banner{display: block;width: 100%;height: auto;}
+.case{background: #fff;overflow: hidden;padding: 0.8em 0.4em 0.3em 0.4em;border-bottom: 1px solid #eaeaec;}
+.chartimg{display: block;width: 100%;height: auto;}
+.chartillustrate{font-size: 0.52em;line-height: 2.38em;padding-top: 0.23em;color: #666;text-align: center;}
+.case ul li{overflow: hidden;line-height: 0.84em;padding: 0.16em 0;}
+.case ul li img{width: 0.6em;height: auto;margin-right:0.26em;}
+.case ul li span{font-size: 0.56em;color: #666;}
+.studentlistbox{background: #fff;padding: 0.6em 0.4em;text-align: center;border-bottom: 1px solid #eaeaec;margin-bottom: 0.6em;}
+.studentlistbox table{font-size: 0.52em;line-height: 2.31em;}
+.studentlistbox th{background: #96d9ff;color: #fff;}
+.studentlistbox td{color: #333;}
+.parentfeedback{background: #fff;border-top: 1px solid #eaeaec;border-bottom: 1px solid #eaeaec;margin-bottom: 2em;}
+.parentfeedback ul{overflow: hidden;padding: 0.64em 0.4em 0.24em 0.4em;}
+.parentfeedback ul li{float: left;width:32%;margin-right: 2%;margin-bottom: 0.4em;}
+.parentfeedback ul li:nth-child(3n){margin-right: 0;}
+.parentfeedback ul li img{width:100%;height: auto;display: block;}

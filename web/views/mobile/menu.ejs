@@ -1,0 +1,5 @@
+<div class="allpagelinks">
+	<% menu.map(function (item) { %>
+		<a href="<%= item.route %>" class="link <%= (item.id == column_id ? 'on' : '') %>"><span><%= item.name %></span></a>
+	<%	}) %>
+</div>

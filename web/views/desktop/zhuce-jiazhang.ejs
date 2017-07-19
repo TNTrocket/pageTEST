@@ -1,0 +1,68 @@
+<%- include('header') -%>
+        
+    <div class="row zhuce-jiazhang">
+        <div class="col-md-12">
+            <div class="zhuce-jiazhang-box-fade"></div>
+            <div class="zhuce-jiazhang-box">
+                <div><h2>家长注册</h2></div> 
+                <div class="zhuce-jiazhang-form">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span>*</span>手机号</label>
+                            <div class="col-md-7">
+                                <input type="tel" class="form-control" id="phone" placeholder="请输入手机号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span>*</span>验证码</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" id="phone" placeholder="请输入验证码">
+                            </div>
+                            <div class="col-md-3">
+                                <img id="captcha_web" src="http://www.51xuanshi.com/web/account/captcha/v/57df495b3a4e4.html" alt="" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span>*</span>短信验证码</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" id="phone" placeholder="请输入短信验证码">
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-default">获取验证码</button>
+                            </div>
+                        </div>       
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span>*</span>设置密码</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control" id="password" placeholder="请输入6~16位新密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span>*</span>确认密码</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control" id="password" placeholder="请输入确认密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">邀请码</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" id="invite_code" placeholder="如有邀请码，请输入">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-7">
+                                <button type="submit" class="btn btn-search btn-zhuce">提交注册</button>
+                            </div>
+                            <div class="col-md-3 zhuce-bottom">
+                                已有账号，<a href="/denglu" style="color:#49bfe0">马上登录</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer') -%>
+<%- include('page-bottom') -%>
+

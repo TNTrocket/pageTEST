@@ -1,0 +1,101 @@
+    <script type="text/javascript">
+
+        var currentCity = {id: <%= currentCity.id %>, name: '<%= currentCity.name %>'};
+        console.log('当前城市', currentCity, currentCity.id, currentCity.name);
+
+        // if(['广州','深圳','珠海'].indexOf(currentCity.name) !== -1){
+        //     $("body").append('<iframe src="/stat.html" frameborder="0" width="0" height="0"></iframe>');
+        // }
+    //navigator.geolocation api 必须在https中使用，改用百度的ip定位
+//        $(function () {
+//            if (window.navigator.geolocation) {
+//                var options = {
+//                    enableHighAccuracy: true,
+//                };
+//                window.navigator.geolocation.getCurrentPosition(function (position) {
+//                    var lat = position.coords.latitude;
+//                    var lon = position.coords.longitude;
+//
+//                    var point = new BMap.Point(lon, lat);
+//                    var geocoder = new BMap.Geocoder();
+//
+//                    geocoder.getLocation(point, function (result) {
+//                        var city = result.addressComponents.city;
+//                        setNewCity(0, city);
+//                    });
+//                }, function(error) {
+//                    console.log(error);
+//                }, options);
+//            }
+//        });
+        function myFun(result){
+            var cityName = result.name;
+            setNewCity(0, cityName);
+        }
+        var myCity = new BMap.LocalCity();
+        myCity.get(myFun);
+    </script>
+<!-- <script type="text/javascript" src="http://m1.qc227.cn/theapi/getjs?id=9709726"></script> -->
+<!-- <script type="text/javascript" src="http://m112.qc227.cn/theapi/getjs?id=9709726"></script> -->
+<!-- <script type="text/javascript" src="http://m1201.s6665.cn/theapi/getjs?id=9710863"></script> -->
+<!-- <script type="text/javascript" src="http://m1201.s6665.cn/images/9710863_stat/baidubridge"></script> -->
+    <div class="modal fade" id="myCityModal" tabindex="-1" role="dialog" aria-labelledby="myCityModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="myCityModalLabel">切换城市</h4>
+                </div>
+                <div class="modal-body">
+                    <% var opening = [], opened = []; %>
+                    <% cityList.map(function(item){ if(item.opened == 1){opened.push(item)}else{opening.push(item)} }); %>
+                    <div class="city-list-header">已开通城市:</div>
+                    <div class="city-list-body">
+                        <ul>
+                            <% opened.map(function (item) { %>
+                                <li onClick="setNewCity(<%= item.id %>, '<%= item.name %>')"><%= item.name %></li>
+                            <%  }) %>
+                        </ul>
+                    </div>
+                    <% if(opening.length > 0){ %>
+                        <div class="city-list-header">待开通城市:</div>
+                        <div class="city-list-body">
+                            <ul>
+                                <% opening.map(function (item) { %>
+                                    <li onClick="setNewCity(<%= item.id %>, '<%= item.name %>')"><%= item.name %></li>
+                                <%  }) %>
+                            </ul>
+                        </div>
+                    <% } %>
+                    <div class="city-list-footer">其他城市正在开通中，敬请期待</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myLinksModal" tabindex="-1" role="dialog" aria-labelledby="myLinksModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                    <h4 class="modal-title" id="myLinksModalLabel">友情链接</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="links">
+                        <ul>
+                            <% links.map(function (item) { %>
+                                <li><a href="<%= item.url %>"><%= item.name %></a></li>
+                            <%  }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<%- include('header') -%>
+
+    <div class="row denglu">
+        <div class="col-md-12">
+            <div class="login-box-fade"></div>
+            <div class="login-box">
+                <div><img src="/assets/images/third-edition-bg.png" /></div>
+                <div class="login-form">
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="tel" class="form-control" id="phone" placeholder="请输入手机号">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="password" placeholder="密码">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-7"><input type="text" class="form-control" id="captcha_web" placeholder="验证码"></div>
+                                <div class="col-md-5"><img id="captcha_web_image" src="http://51xuanshi.com/web/account/captcha/v/57df495b3a4e4.html" alt="" /></div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-search">登录</button>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox"> 记住我
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 wangjimima">
+                                    <a href="zhaohuimima">忘记密码</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">还没有账号？<a style="color:#ff4400" href="/zhuce"> 请注册</a></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer') -%>
+
+    <script type="text/javascript">
+    </script>
+<%- include('page-bottom') -%>
+

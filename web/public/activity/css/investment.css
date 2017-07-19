@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body, * {
+    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+}
+
+.inline-item{
+    display: inline-block;
+}
+.invest-row{
+    padding-top: 22px;
+    width: 65%;
+    left: 50%;
+    position: relative;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.invest-row-title-text{
+    width: 100%;
+    font-size: 40px;
+    padding-bottom: 15px;
+    text-align: center;
+    border-bottom: 1px solid #d5dad4;
+}
+.invest-row-detail{
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+}
+.cut-line{
+    display: inline-block;
+    width: 75px;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: -10px;
+    color: #1795fb;
+    background-color: #1795fb;
+    height: 4px;
+    border: none;
+}
+.white-text{
+    color: #fff;
+}
+.gray-background{
+    background: #afb0b1!important;
+}
+.gray-font{
+    color: #666666!important;
+}
+
+.banner{
+    width: 100%;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.user-scale-detail{
+    margin-top: 15px;
+
+}
+.scale-detail-item{
+    padding: 10px 0;
+    vertical-align: top;
+    text-align: center;
+}
+
+.scale-img{
+    width: 30%;
+}
+.scale-img img{
+    width: 3rem;
+    width: 224px;
+}
+.scale-detail-describe{
+    height: 3rem;
+    height: 186px;
+    text-align: center;
+	position: relative;
+    left: 2.90%;
+}
+.scale-describe{
+    width: 30.2%;
+    height: 100px;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #777777;
+    line-height: 25px;
+    margin-right: 20px;
+    float: left;
+}
+
+.education-service{
+    background: url(/activity/images/serv-background.png) no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: cover;
+	height: 520px;
+    height: 9rem;
+    width: 100%;
+}
+.service-line{
+    text-align: center;
+}
+.service-item{
+    width: 22%;
+    margin: 10px 0;
+}
+.service-item-icon{
+    text-align: center;
+}
+.service-item-describe{
+    color: #fff;
+    margin: 10px 0 0 0;
+    font-size: 12px;
+}
+
+.service-item-describe h3{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/*选师无忧VS传统机构*/
+.service-comparison{
+    height: 8rem;
+    height: 565px;
+    margin-bottom: 10px;
+}
+.xs51-service-row {
+    height: 7.5rem;
+    height: 405px;
+    text-align: center;
+	position: relative;
+    left: 57%;
+}
+.xs51-service{
+    background: #2295f2;
+    height: 5.5rem;
+    height: 385px;
+    width: 40%;
+    border-radius: 6px;
+    position: relative;
+    margin: 0 15px;
+	float: left;
+}
+.xs51-service-title{
+    background: #0785ea;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 40px;
+    line-height: 38px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.xs51-service-img {
+    margin: 20px 10px 10px 10px;
+    text-align: center;
+}
+.xs51-service-img img {
+    display: inline-block;
+    width: 75px;
+    margin: 0 10px;
+
+}
+.xs51-service-describe{
+    margin: 20px 60px 20px 20px;
+    color: #fff;
+    line-height: 20px;
+    text-align: left;
+    font-size: 13px;
+}
+.old-service{
+    background: #c8cdd1;
+}
+.service-thumb{
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+}
+.service-thumb img{
+    width: 50px;
+}
+/*领先的技术平台*/
+.technology-platform{
+    background: url(/activity/images/tech-platform-bg.png) no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: cover;
+    height: 8rem;
+    height: 555px;
+    width: 100%;
+}
+.service-platform{
+    text-align: center;
+}
+.platform-title{
+    margin: 20px 0;
+}
+.platform-title span{
+    color: #fff;
+
+}
+.platform-img img {
+    width: 7rem;
+    width: 405px;
+}
+
+/*已服务超过10万家长*/
+.service-users{
+    height: 9.2rem;
+    height: 545px;
+}
+.service-users-chart{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.chart-title {
+    margin: 20px 0;
+
+}
+.chart-img img {
+    width: 9rem;
+    width: 598px;
+}
+
+/*健全的营销体系*/
+.corporate-vms{
+    background: url(/activity/images/vms-background.png) no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: cover;
+    height: 7rem;
+    height: 555px;
+    width: 100%;
+}
+.market-detail{
+    width: 100%;
+}
+.market-row{
+    width: 100%;
+}
+.market-item{
+    display: inline-block;
+    width: 24.9%;
+    height: 2.5rem;
+    height: 180px;
+    text-align: center;
+    float: left;
+}
+
+.market-item:after{
+    content: '';
+    display: block;
+    float: none;
+}
+.item-blue{
+    background-color: #2295f2;
+}
+.item-green{
+    background-color: #2fd07f;
+}
+.market-item-content{
+    width: 100%;
+    /*height: 1.5rem;*/
+    position: relative;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.market-item-content p{
+    color: #fff;
+    margin: 10px;
+    font-size: 18px;
+}
+.market-item-icon img{
+    width: 60px;
+}
+/*投资和盈利*/
+.invest-profit{
+    height: 415px;
+    height: 7rem;
+    width: 100%;
+}
+.invest-table table{
+    border: 1px solid #d5dad4;
+    width: 100%;
+}
+
+.invest-table table thead tr{
+    width: 100%;
+    height: 60px;
+    background-color: #30d180;
+    color: #fff;
+    font-size: 16px;
+}
+.invest-table table td{
+    border: none;
+}
+.invest-table table th{
+    border: none;
+    text-align: center;
+}
+
+.invest-table table tbody tr {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+
+}
+.invest-table table tbody td {
+    border-bottom: 1px solid #d5dad4;
+    border-right: 1px solid #d5dad4;
+    font-size: 13px;
+	background: #efeeee;
+}
+
+.invest-table table tbody tr:last-of-type td {
+    border-bottom: none;
+}
+.invest-table table tbody tr td:last-of-type {
+    border-right: none;
+}
+
+
+
+/*谁可以加入选师无忧城市合伙计划*/
+.partners{
+    background: url(/activity/images/partners-background.png) no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: cover;
+    height: 600px;
+    height: 7.5rem;
+    width: 100%;
+}
+.partners-detail{
+    /*position: relative;*/
+    /*left: 50%;*/
+    /*-webkit-transform: translateX(-50%);*/
+    /*-moz-transform: translateX(-50%);*/
+    /*-ms-transform: translateX(-50%);*/
+    /*-o-transform: translateX(-50%);*/
+    /*transform: translateX(-50%);*/
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cooperate-item{
+    display: inline-block;
+    width: 22%;
+    margin-right: 130px;
+    margin-right: 1.8rem;
+}
+.cooperate-item:last-of-type{
+    margin-right: 0;
+}
+
+.cooperate-item h3{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.cooperate-item-img{
+    width: 100%
+}
+.cooperate-item-img img{
+    width: 100%;
+    display: inline-block;
+}
+.cooperate-item-title{
+    width: 100%;
+    background-color: #fff;
+    height: 45px;
+    line-height: 43px;
+    font-size: 18px;
+}
+
+.apply-entry{
+    background: url(/activity/images/apply-background.png) no-repeat center center;
+    -webkit-background-size: contain;
+    background-size: cover;
+    height: 389px;
+    height: 4.22rem;
+    width: 100%;
+}
+
+.apply-input-form{
+    width: 185px;
+    width: 4.5rem;
+    position: relative;
+    left: 25%;
+    top: 12%;
+
+}
+.apply-input-form h3{
+    color: #fff;
+    font-size: 16px;
+}
+.apply-input-form input {
+    /*display: block;*/
+    height: 35px;
+    width: 250px;
+    margin: 8px 0;
+    background-color:transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding-left: 10px;
+}
+.apply-input-form input[type='number'] {
+    -moz-appearance:textfield;
+}
+.apply-input-form input[type=number]::-webkit-inner-spin-button,
+.apply-input-form input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+    padding-left: 10px;
+}
+/*.apply-input-form input:-moz-placeholder{
+    color: #fff;
+    padding-left: 10px;
+}
+.apply-input-form input::-moz-placeholder{
+    color: #fff;
+    padding-left: 10px;
+}
+.apply-input-form input:-ms-input-placeholder{
+    color: #fff;
+    padding-left: 10px;
+}
+*/
+.apply-submit{
+    display: block;
+    height: 35px;
+    width: 256px;
+    line-height: 33px;
+    font-size: 14px;
+    border: 1px solid #fff;
+    text-align: center;
+    color: #fff;
+}
+
+@media screen and (max-width: 1920px) {
+	.education-service {
+	    height: 520px;
+	    height: 8.5rem;
+	}
+    /*选师无忧VS传统机构*/
+    .service-comparison{
+        height: 620px;
+        height: 10.5rem;
+        margin-bottom: 10px;
+    }
+    .xs51-service-row {
+        height: 380px;
+         height: 7rem;
+        text-align: center;
+    }
+    .xs51-service{
+        height: 435px;
+        height: 7.4rem;
+    }
+	.xs51-service-img img {
+	    display: inline-block;
+	    width: 90px;
+	    margin: 0px 30px;
+	}
+    .xs51-service-describe{
+        line-height: 30px;
+    }
+
+    /*谁可以加入选师无忧城市合伙计划*/
+    .partners{
+        height: 595px;
+        height: 10rem;
+    }
+
+    .apply-entry{
+        height: 489px;
+        height: 6.52rem;
+    }
+    .apply-input-form{
+        position: relative;
+        left: 30%;
+        top: 25%;
+    }
+
+}
+
+@media screen and (max-width: 1360px) {
+    /*选师无忧VS传统机构*/
+    .service-comparison{
+        height: 665px;
+        /*height: 11.5rem;*/
+        margin-bottom: 10px;
+    }
+    .xs51-service-row {
+        height: 405px;
+        height: 7.5rem;
+        text-align: center;
+    }
+    .xs51-service{
+        height: 505px;
+        height: 8.2rem;
+    }
+    .xs51-service-describe{
+        line-height: 30px;
+    }
+	
+	.xs51-service-img img {
+	    display: inline-block;
+	    width: 75px;
+	    margin: 0 10px;
+	}
+
+    /*谁可以加入选师无忧城市合伙计划*/
+    .partners{
+        height: 505px;
+        height: 8.5rem;
+    }
+
+    .apply-entry{
+        height: 375px;
+        height: 4.8rem;
+    }
+    .apply-input-form{
+        position: relative;
+        left: 25%;
+        top: 12%;
+    }
+    .apply-input-form input {
+        width: 200px;
+    }
+    .apply-submit{
+        width: 208px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+	.education-service{
+		height: 520px;
+	    height: 9rem;
+	}
+    /*选师无忧VS传统机构*/
+    .service-comparison{
+        height: 646px;
+        height: 10.7rem;
+        margin-bottom: 10px;
+    }
+    .xs51-service-row {
+        height: 405px;
+        height: 8rem;
+        text-align: center;
+    }
+    .xs51-service{
+        height: 465px;
+        height: 7.8rem;
+    }
+    .xs51-service-describe{
+        line-height: 30px;
+    }
+	
+	.xs51-service-img img {
+	    display: inline-block;
+	    width: 75px;
+	    margin: 0 10px;
+	}
+
+    /*谁可以加入选师无忧城市合伙计划*/
+    .partners{
+        height: 483px;
+        height: 8rem;
+    }
+
+    .apply-entry{
+        height: 389px;
+        height: 4.22rem;
+    }
+    .apply-input-form{
+        position: relative;
+        left: 25%;
+        top: 12%;
+    }
+    .apply-input-form input {
+        width: 200px;
+    }
+    .apply-submit{
+        width: 208px;
+    }
+}

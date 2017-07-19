@@ -1,0 +1,66 @@
+                <div class="row column-recommend">
+                    <div class="col-md-12">
+                        <div class="pull-left column-title">推荐阅读</div>
+                        <div class="pull-right column-right"><img src="/assets/images/title_middle4.png" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 kemudaohang">
+                <div class="row">
+                    <div class="col-md-12 kemudaohang-title">科目导航</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 kemudaohang-list">
+                        <ul>
+                            <li><a href="/yuwen">语文</a></li>
+                            <li><a href="/shuxue">数学</a></li>
+                            <li><a href="/yingyu">英语</a></li>
+                            <li><a href="/wuli">物理</a></li>
+                            <li><a href="/huaxue">化学</a></li>
+                            <li><a href="/shengwu">生物</a></li>
+                            <li><a href="/zhengzhi">政治</a></li>
+                            <li><a href="/lishi">历史</a></li>
+                            <li><a href="/dili">地理</a></li>
+                            <li><a href="/gaozhongfudao/lizong">理综</a></li>
+                            <li><a href="/gaozhongfudao/wenzong">文综</a></li>
+                            <li><a href="/xiaoxuefudao/aoshu">奥数</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 recommend-teacher-title">老师推荐</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 recommend-teacher">
+                        <div>
+                            <img src="/assets/images/laoshi.gif"  alt="...">
+                        </div>
+                        <div><a href="<%= online.route %>" target="_blank" class="btn btn-search">在线咨询</a></div>
+                        <div><button class="btn btn-search" type="button" data-toggle="modal" data-target="#yuyueModal">我要预约</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="recommend-article-list">
+                    <% if(relatedArticleList.length > 0){ relatedArticleList.map(function (item) { %>
+                        <li>
+                            <img src="<%= item.image ? item.image : '/assets/default.png' %>" />
+                            <div>
+                                <div class="title"><%= item.title %></div>
+                                <div class="description">
+                                    <%= item.information.length > 50 ? item.information.substring(0, 50) + '...' : item.information %>
+                                </div>
+                                <a href="<%= item.route %>">点击查看原文</a>
+                            </div>
+                        </li>
+
+                    <%  })}else{ %>
+                        <div style="padding: 10px 0;">没有相关数据。</div>
+                    <%  } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

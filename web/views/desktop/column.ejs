@@ -1,0 +1,100 @@
+<%- include('header') -%>
+        
+<%- include('page-banner') -%>
+
+<div class="row">
+    <div class="container">
+        <div class="row subpage-content">
+            <div class="col-md-9">
+                <div class="row column-header">
+                    <div class="col-md-12">
+                        <div class="pull-left current-column"><%= title %></div>
+                        <% if(childColumns && childColumns.length > 0){ %>
+                            <div class="pull-right all-column">
+                                <div></div>
+                                <div>全部</div>
+                            </div>
+                            <div class="pull-right self-column">   
+                                <ul>
+                                    <% childColumns.map(function (item, index) { %>
+                                        <li>
+                                            <div><img src="/assets/images/title_left.png" /></div>
+                                            <div><a href="<%= item.route %>"><%= item.name %></a></div>
+                                            <div><img src="/assets/images/<%= index == (childColumns.length -1) ? 'title_middle.png' : 'title_right.png' %>" /></div>
+                                        </li>
+                                    <%  }) %>
+                                </ul>                
+                            </div>
+                        <% }else{ %>
+                            <div class="pull-right all-column-right"><img src="/assets/images/title_middle4.png" /></div>
+                        <% } %>
+                        
+                        
+                    </div>
+                </div>
+                <div class="row column-article">
+                    <div class="col-md-12 article-list" id="articleListPanel">
+                        <ul>
+                            <% if(articleList.length > 0){ articleList.map(function (item) { %>
+                                <li>
+                                    <div class="title"><a href="<%= item.route %>"><%= item.title %></a></div>
+                                    <div class="date"><%= item.publish_date %></div>
+                                </li>
+                            <%  })}else{ %>
+                                <div style="padding: 10px 0;">没有相关数据。</div>
+                            <%  } %>
+                            <!--<li>
+                                <div class="title"><a href="">调用学习乐园10篇文章展示，4列三行，标题限制20字内</a></div>
+                                <div class="date">2016-06-28</div>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="row column-article-paginator">
+                    <div class="col-md-4 paginator-info" id="paginator-info">共53条 每页10条 页次：1/6</div>
+                    <div class="col-md-8">
+                        <ul class="pagination" id="article-paginator"></ul>
+                    </div>
+                </div>
+
+                        
+                <%- include('page-right') -%>
+
+
+<%- include('footer') -%>
+
+<script src="/assets/javascripts/jqPaginator.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        var totalRecord = <%= articleTotal %>, maxResult = 10;
+        //var totalPage = (totalRecord + maxResult -1) / maxResult;
+        var totalPage = totalRecord % maxResult == 0 ? totalRecord / maxResult : Math.ceil(totalRecord / maxResult);
+
+        $('#paginator-info').html('共' + totalRecord + '条 每页10条 页次：1/' + totalPage);
+
+        $.jqPaginator('#article-paginator', {
+            visiblePages: 5,
+            currentPage: 1,
+            pageSize: maxResult,
+            totalCounts: totalRecord,
+            first: '<li class="next"><a href="javascript:;">首页</a></li>',
+            prev: '<li class="prev"><a href="javascript:;">上一页</a></li>',
+            next: '<li class="prev"><a href="javascript:;">下一页</a></li>',
+            last: '<li class="next"><a href="javascript:;">末页</a></li>',
+            page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+            onPageChange: function (num, type) {
+                console.log('你的点击：', num, type);
+                var column = {id: <%= column.id %>, name: '<%= column.name %>'};
+                var params = {page: num, column: JSON.stringify(column)};
+                console.log(params);
+                if(type == 'change'){
+                    getWebArticleList(params, 'articleListPanel');
+                }                
+            }
+        });
+
+    });
+</script>
+
+<%- include('page-bottom') -%>
+

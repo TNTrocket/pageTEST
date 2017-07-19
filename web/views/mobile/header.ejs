@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="wap-font-scale" content="no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<!--uc强制竖屏-->
+		<meta name="screen-orientation" content="portrait">
+		<!--QQ强制竖屏-->
+		<meta name="x5-orientation" content="portrait">
+
+		<title><%= seoTitle %></title>
+		<meta name="keywords" content="<%= keywords %>">
+	    <meta name="description" itemprop="description" content="<%= description %>">
+
+		<link rel="stylesheet" href="/assets/css/wap-base.css" />
+		
+		<script type="text/javascript" src="/assets/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/assets/js/wap-public.js"></script>		
+		
+		<% if(css == 'index') { /*  首页  */ %>
+			<link rel="stylesheet" href="/assets/css/wap-home.css" />
+			<script type="text/javascript" src="/assets/js/wap-home.js"></script>
+			<script type="text/javascript" src="/assets/js/hhSwipe.js"></script>
+			<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=hvwjGORAmnQyR2AfGMdhOC2F"></script>
+		<% } else if(css == 'teacher') { /*  名师团队  */ %>
+			<link rel="stylesheet" href="/assets/css/wap-teacher.css" />
+		<% } else if(css == 'tifenanli') { /*  提分案例  */ %>
+			<link rel="stylesheet" href="/assets/css/wap-improvescorecase.css" />
+		<% } else if(css == 'findTeacher') { /*  找老师  */ %>
+			<link rel="stylesheet" href="/assets/css/wap-findTeacherNew.css">
+		<% } else if(css == 'tifenjiqiao' || css == 'fudao') { /*  初高中、小学辅导页 提分技巧  */ %>
+			<link rel="stylesheet" href="/assets/css/wap-hometwolevel.css" />
+		<% } else if(css == 'news') { /*  新闻头条、家长加油、高考|中考|升学资讯、学科辅导、家教微问  */ %>
+			<link rel="stylesheet" href="/assets/css/wap-newsheadlines.css" />
+		<% } else if(css == 'wuyou') { /*  无忧路线 无忧概况  */ %>
+			<link rel="stylesheet" href="/assets/css/wap-homethreelevel.css" />
+			<script type="text/javascript" src="/assets/js/hhSwipe.js"></script>
+			<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=hvwjGORAmnQyR2AfGMdhOC2F"></script>
+		<% } else if(css == 'public') { /*  通用栏目页  */ %>
+			<link rel="stylesheet" href="/assets/css/wap-item.css" />
+		<% } else if(css == 'article') { /*  文章页  */ %>
+			<link rel="stylesheet" href="/assets/css/wap-article.css" />
+		<% } %>		
+				
+	</head>
+	<body>

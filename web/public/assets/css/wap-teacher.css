@@ -1,0 +1,50 @@
+.bannertitle{overflow: hidden;border-bottom: 1px solid #eaeaec;padding: 0 0.4em;}
+.bannertitle .left{float: left;margin-right: 0.6em;height: 1.36em;}
+.bannertitle .left img{width:0.44em;height: auto;display: block;float: left;margin: 0.3em 0.22em 0 0;}
+.bannertitle .left span{font-size: 0.56em;line-height: 2.43em;float: left;color: #ffb135;}
+
+.bannertitle .center{float: left;font-size: 0.56em;line-height: 2.43em;color: #999;}
+.bannertitle .center span{color:#c7d7e1;font-size: 1.2em;margin-right: 0.26em;}
+.bannerbox{display: block;}
+.banner{display: block;width: 100%;height: auto;}
+.teachertitle{border-top: 1px solid #eaeaec;border-bottom: 1px solid #eaeaec;overflow: hidden;height: 1.76em;padding: 0 0.4em;}
+.teachertitle .left{float: left;font-size: 0.64em;line-height: 2.75em;margin-right: 1.38em;}
+.teachertitle .left span{color: #2eb3ff;padding-right: 0.44em;}
+.teachertitle .center{float: left;overflow: hidden;}
+.teachertitle .center img{width: 0.68em;height: auto;float: left;margin:0.5em 0.24em 0 0;}
+.teachertitle .center span{font-size: 0.56em;color: #333;float: left;line-height: 3.14em;}
+.teachertitle .more{float: right;}
+.teachertitle .more span{font-size: 0.52em;color: #333;float: left;line-height: 3.2em;}
+.teachertitle .more img{width: 0.2em;height: auto;float: left;margin:0.7em 0 0 0.24em;}
+.allteacherbox{background: #fff;border-bottom: 1px solid #eaeaec;padding: 0.6em 0.4em 0;overflow: hidden;margin-bottom: 0.56em;}
+.allteacherbox .teacher{display: block;background: #eaeaec;border-radius: 0.16em;margin-bottom: 0.6em;padding: 0.66em 0.46em 0.54em 0.46em;}
+.allteacherbox th{width: 4em;}
+.allteacherbox .facebox{width: 3.6em;height: 3.6em;border-radius: 50%;border: 0.18em solid #f0f0f2;background: #fff;overflow: hidden;}
+.allteacherbox .facebox img{display: block;width: 100%;height: auto;}
+.allteacherbox .introduce{font-size: 0.64em;color: #333;}
+.allteacherbox .teachingage{font-size: 0.56em;color: #ff4400;}
+.authentication{overflow: hidden;}
+.authentication li{float: left;width: 50%;overflow: hidden;}
+.authentication li img{width: 0.76em;height: auto;margin:0.15em 0.24em 0 0;display: block;float: left;}
+.authentication li span{font-size: 0.56em;color: #999;float: left;line-height: 1.5em;}
+
+.teacher-info{background: #fff;padding: 0.4em;border-bottom: 1px solid #eaeaec;margin-bottom: 0.6em;font-size: 0.56em;line-height: 1.5em;}
+.teacher-info p{text-indent: 2em;}
+.teacher-info img{display: block;width: 100%;height: auto;}
+.teacher-info .teacher-message{font-size: 0.52em;line-height: 1.54em;padding-top: 0.38em;text-align: right;}
+.teacher-info .teacher-message span{padding-right: 0.85em;}
+.teacher-info .teacher-message span:last-child{padding-right: 0;}
+
+.teacher-box{overflow: hidden;}
+.teacher-box>.teacher{display: block;background: #fff; border-bottom: 1px solid #eaeaec;border-top: 1px solid #eaeaec; margin-bottom: 0.6em;padding: 0.66em 0.46em 0.54em 0.46em;}
+.teacher-box>.teacher:first-child{border-top: 0;}
+.teacher-box th{width: 4em;}
+.teacher-box .facebox{width: 3.6em;height: 3.6em;border-radius: 0.2em;border: 0.1em solid #ffffff;background: #fff;overflow: hidden;}
+.teacher-box .facebox img{display: block;width: 100%;height: auto;}
+.teacher-box .introduce{font-size: 0.64em;color: #333;}
+.teacher-box .teacher-name{float: left;}
+.teacher-box .teachingage{float: right;font-size: 0.8em;color: #ff4400;}
+.teacher-box .authentication1{overflow: hidden;}
+.teacher-box .authentication1 li{float: left;width: 25%;overflow: hidden;text-align: center;}
+.teacher-box .authentication1 li img{margin:15px auto 10px auto}
+.teacher-box .authentication1 li div{font-size: 0.56em;color: #999;line-height: 1.5em;}

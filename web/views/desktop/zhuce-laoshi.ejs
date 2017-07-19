@@ -1,0 +1,69 @@
+<%- include('header') -%>
+        
+    <div class="row zhuce-laoshi">
+        <div class="col-md-12">
+            <div class="zhuce-laoshi-box-fade"></div>
+            <div class="zhuce-laoshi-box">
+                <div>
+                    <ul class="stepMenu step1">
+                        <li class="on">第一步<span>（帐号注册）</span></li>
+                        <li>第二步<span>（填写资料）</span></li>
+                        <li>第三步<span>（证件认证）</span></li>
+                    </ul>
+                </div> 
+                <div class="zhuce-laoshi-form">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span>*</span>手机号</label>
+                            <div class="col-md-7">
+                                <input type="tel" class="form-control" id="phone" placeholder="请输入手机号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span>*</span>短信验证码</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" id="phone" placeholder="请输入短信验证码">
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-default">获取验证码</button>
+                            </div>
+                        </div>       
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span>*</span>设置密码</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control" id="password" placeholder="请输入6~16位新密码">
+                            </div>
+                        </div>    
+                        <div class="form-group">
+                            <label class="col-md-2 control-label"><span>*</span>确认密码</label>
+                            <div class="col-md-7">
+                                <input type="password" class="form-control" id="password" placeholder="请输入确认密码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">邀请码</label>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" id="invite_code" placeholder="如有邀请码，请输入">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-7">
+                                <button type="submit" class="btn btn-search btn-zhuce">下一步</button>
+                            </div>
+                            <div class="col-md-3 zhuce-bottom">
+                                已有账号，<a href="/denglu" style="color:#49bfe0">马上登录</a>
+                            </div>
+                        </div>
+                        <p class="ifProblem">有疑问？加入QQ群：410110138,让选师无忧小助手为您排忧解难！</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('footer') -%>
+
+    <script type="text/javascript">
+    </script>
+<%- include('page-bottom') -%>
+

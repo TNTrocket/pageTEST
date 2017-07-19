@@ -1,0 +1,10 @@
+<div class="banner-box"><a href="<%= banner.url ? banner.url : '#' %>" ><img src="<%= banner ? banner.image : '/assets/img/wap33.jpg' %> " class="banner"></a></div>
+
+<div class="fourinterfaces">
+	<% subMenu.map(function (item) { %>
+		<a href="<%= item.route %>">
+			<img src="<%= item.image %>" />
+			<span><%= item.name %></span>
+		</a>
+	<%	}) %>
+</div>

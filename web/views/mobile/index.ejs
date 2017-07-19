@@ -1,0 +1,170 @@
+<%- include('header') -%>
+
+<div class = "homepage" >
+	<div class="headerlineplaceholder"></div> <div class = "headerline" >
+	<div class="selectcitybtn">
+				<span><%= currentCity.name %></span><img src="/assets/img/wap15.png">
+			</div> <a href = "waphome.html" class = "logo" > <img src="/assets/img/wap1.png" ></a>
+			<a href="tel:400-612-5351" class="telbox">
+				<span>400-612-5351</span>
+			</a>
+		</div>
+
+		<%- include('menu') -%>
+
+		<!--banner广告部分-->
+		<div class="addWrap">
+			<div class="swipe" id="mySwipe">
+				<div class="swipe-wrap">
+					<% banners.map(function (item) { %>
+						<div><a href="<%= item.url ? item.url : '#' %>" ><img class="img-responsive" src="<%= item.image %>"/></a></div>
+					<%	}) %>
+				</div>
+			</div>
+			<ul id="position">
+				<% banners.map(function (item, index) { %>
+					<li <%= index == 0 ? 'class="cur"' : '' %> ></li>
+				<%	}) %>
+			</ul>
+		</div>
+		<div class="hotspotsout">
+			<div class="title">
+				<div class="left"><span>|</span>热点推送</div>
+				<a href="<%= columnNews.route %>"><span>更多</span><img src="/assets/img/wap16.png"></a>
+			</div>
+			<div class="con">
+				<% newsArticle.map(function (item) { %>
+					<div class="hotspot">
+						<a href="<%= item.route %>">
+							<table width="100%">
+								<tr>
+									<th>
+										<div class="thumbnailbox">
+											<img src="<%= item.image %>" />
+										</div>
+									</th>
+									<td>
+										<div class="titleline"><%= item.title %></div>
+										<div class="summary"><%= item.information %></div>
+									</td>
+								</tr>
+							</table>
+						</a>
+					</div>
+				<%	}) %>
+			</div>
+		</div>
+		<a href="" class="bannerbox">
+			<img src="/assets/img/wap5.png">
+		</a>
+		<div class="advantage">
+			<img src="/assets/img/wap6.png" class="titleicon">
+			<div class="title"><span>教师优势</span></div>
+			<img src="/assets/img/wap9.png" class="detilimg">
+			<div class="detail"><p>全国8000所名校名师  最牛学霸都在这里，老师认证齐全【身份证认证、教师资格认证】教学质量保障，好的就是放心.</p></div>
+		</div>
+		<div class="strength">
+			<img src="/assets/img/wap7.png" class="titleicon" />
+			<div class="title"><span>品牌实力背书</span></div>
+			<img src="/assets/img/wap10.png" class="detilimg" />
+		</div>
+		<div class="resultbox">
+			<div class="title">选师无忧找好老师</div>
+			<div class="slogan">一对一辅导效果看得见</div>
+			<table width="100%" border="1" borderColor="#eaeaec" class="resulttable">
+				<tr>
+					<th>姓名</th>
+					<th>辅导科目</th>
+					<th>辅导前</th>
+					<th>辅导后</th>
+					<th>提分</th>
+					<th>录取学校</th>
+				</tr>
+				<% student.map(function (item) { %>
+					<tr>
+						<td><%= item.name %></td>
+						<td><%= item.subject %></td>
+						<td><%= item.tutor_before %></td>
+						<td><%= item.tutor_after %></td>
+						<td><%= (item.tutor_after - item.tutor_before) %></td>
+						<td><%= item.school %></td>
+					</tr>
+				<%	}) %>
+			</table>
+		</div>
+
+		<div class="parentfeedback">
+			<div class="title"><span>|</span>家长反馈</div>
+			<ul>
+				<% jiazhangfankui.map(function (item) { %>
+					<li><img src="<%= item.image %>" alt="<%= item.title %>" /></li>
+				<%	}) %>
+			</ul>
+		</div>
+	</div>
+
+	<!--切换城市-->
+	<div class="selectcitypage">
+		<div class="headerline">
+			<a class="back"><img src="/assets/img/wap17.png"></a>
+			<p>切换城市</p>
+		</div>
+		<div class="searchbox">
+			<input type="text" placeholder="输入城市名或者拼音查询" id="searchCityName" onChange="searchCity()" onkeyup="searchCity()">
+		</div>
+
+		<% var openingCityList = [], openedCityList = []; %>
+        <% cityList.map(function(item){ if(item.opened == 1){openedCityList.push(item)}else{openingCityList.push(item)} }); %>
+
+		<div class="citytitle">GPS定位城市</div>
+		<div class="locationcity"><%= currentCity.name %></div>
+		<div class="citytitle">已开通城市</div>
+		<div class="allcitys" id="divCityList">
+			<% openedCityList.map(function (item) { %>
+				<div class="city <%= item.id == currentCity.id ? 'on' : '' %>" onClick="setNewCity(<%= item.id %>, '<%= item.name %>')"><%= item.name %></div>
+			<%	}) %>
+		</div>
+		<% if(openingCityList.length > 0){ %>
+			<div class="citytitle">待开通城市</div>
+			<div class="allcitys">
+				<% openingCityList.map(function (item) { %>
+					<div class="city" onClick="setNewCity(<%= item.id %>, '<%= item.name %>')"><%= item.name %></div>
+				<%	}) %>
+			</div>
+		<% } %>
+		<div class="wait">其他城市正在开通中，敬请期待</div>
+	</div>
+
+	<script type="text/javascript">
+		var currentCity = {id: <%= currentCity.id %>, name: '<%= currentCity.name %>'};
+
+		// if(['广州','深圳','珠海'].indexOf(currentCity.name) !== -1){
+		// 	$("body").append('<iframe src="/stat.html" frameborder="0" width="0" height="0"></iframe>');
+		// }
+
+		$(function () {
+			if (window.navigator.geolocation) {
+				var options = {
+					enableHighAccuracy: true,
+				};
+				window.navigator.geolocation.getCurrentPosition(function (position) {
+					var lat = position.coords.latitude;
+					var lon = position.coords.longitude;
+
+					var point = new BMap.Point(lon, lat);
+					var geocoder = new BMap.Geocoder();
+
+					geocoder.getLocation(point, function (result) {
+						var city = result.addressComponents.city;
+						setNewCity(0, city);
+					});
+				}, function(error) {
+					console.log(error);
+				}, options);
+			}
+		});
+	</script>
+
+	<%- include('public') -%>
+
+<%- include('footer') -%>

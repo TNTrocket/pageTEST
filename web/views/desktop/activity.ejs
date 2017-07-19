@@ -1,0 +1,309 @@
+
+<%- include('header') -%>
+<link rel="shortcut icon" type="image/x-icon" href="http://gz.51xuanshi.com/assets/images/logo.png">
+<link rel="stylesheet" href="/activity/css/investment.css">
+<!--[if lte IE 8]> <link rel="stylesheet" href="/activity/css/less-ie8.css"> <![endif]-->
+<!--[if lte IE 7]> <link rel="stylesheet" href="/activity/css/lte-ie7.css"> <![endif]-->
+
+<script>
+    !function(a,b){function c(){console.log("base:flexible1");var b=f.getBoundingClientRect().width;b/i>540&&(b=540*i);var c=b/9;f.style.fontSize=c+"px",k.rem=a.rem=c;console.log("base:flexible2");}var d,e=a.document,f=e.documentElement,g=e.querySelector('meta[name="viewport"]'),h=e.querySelector('meta[name="flexible"]'),i=0,j=0,k=b.flexible||(b.flexible={});if(g){console.warn("将根据已有的meta标签来设置缩放比例");var l=g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);l&&(j=parseFloat(l[1]),i=parseInt(1/j))}else if(h){var m=h.getAttribute("content");if(m){var n=m.match(/initial\-dpr=([\d\.]+)/),o=m.match(/maximum\-dpr=([\d\.]+)/);n&&(i=parseFloat(n[1]),j=parseFloat((1/i).toFixed(2))),o&&(i=parseFloat(o[1]),j=parseFloat((1/i).toFixed(2)))}}if(!i&&!j){var p=a.navigator.userAgent,q=(!!p.match(/android/gi),!!p.match(/iphone/gi)),r=q&&!!p.match(/OS 9_3/),s=a.devicePixelRatio;i=q&&!r?s>=3&&(!i||i>=3)?3:s>=2&&(!i||i>=2)?2:1:1,j=1/i}if(f.setAttribute("data-dpr",i),!g)if(g=e.createElement("meta"),g.setAttribute("name","viewport"),g.setAttribute("content","initial-scale="+j+", maximum-scale="+j+", minimum-scale="+j+", user-scalable=no"),f.firstElementChild)f.firstElementChild.appendChild(g);else{var t=e.createElement("div");t.appendChild(g),e.write(t.innerHTML)}a.addEventListener("resize",function(){clearTimeout(d),d=setTimeout(c,300)},!1),a.addEventListener("pageshow",function(a){a.persisted&&(clearTimeout(d),d=setTimeout(c,300))},!1),"complete"===e.readyState?e.body.style.fontSize=12*i+"px":e.addEventListener("DOMContentLoaded",function(){e.body.style.fontSize=12*i+"px"},!1),c(),k.dpr=a.dpr=i,k.refreshRem=c,k.rem2px=function(a){var b=parseFloat(a)*this.rem;return"string"==typeof a&&a.match(/rem$/)&&(b+="px"),b},k.px2rem=function(a){var b=parseFloat(a)/this.rem;return"string"==typeof a&&a.match(/px$/)&&(b+="rem"),b}}(window,window.lib||(window.lib={}));
+</script>
+<div class="row">
+<div class="banner"><img src="/activity/images/banner.jpg" ></div>
+<div style="width: 100%">
+    <div class="invest-row">
+        <div class="invest-row-title">
+            <div class="invest-row-title-text">巨大的用户规模</div>
+            <div class="cut-line"></div>
+        </div>
+        <div class="invest-row-detail">
+            <div class="scale-detail-item">
+                <div class="scale-img inline-item"><img src="/activity/images/scale-market.png"></div>
+                <div class="scale-img inline-item"><img src="/activity/images/scale-business.png"></div>
+                <div class="scale-img inline-item"><img src="/activity/images/scale-exper.png"></div>
+            </div>
+            <div class="scale-detail-describe">
+                <p class="scale-describe inline-item">&nbsp;&nbsp;&nbsp;&nbsp;根据相关调查显示，整个线上教育规模40,000亿，其中服务市场规模占比5%左右，加上传统教育市场，总体市场规模达4000亿。</p>
+                <p class="scale-describe inline-item">&nbsp;&nbsp;&nbsp;&nbsp;选师无忧建立了一套完善的线上体系，从PC端到移动端，从前台展示到后台服务系统，仅针对PC端消费的平台，选师无忧就有巨大的用户规模。</p>
+                <p class="scale-describe inline-item">&nbsp;&nbsp;&nbsp;&nbsp;选师无忧具有强大的后台技术团队和品牌宣传团队，拥有成熟的技术、市场、管理和运营团队</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="education-service">
+    <div class="invest-row">
+        <div class="invest-row-title">
+            <div class="invest-row-title-text white-text">关于我们·互联网+教育服务</div>
+            <div class="cut-line"></div>
+        </div>
+        <div class="service-line">
+            <div class="service-item inline-item">
+                <div class="service-item-icon"><img src="/activity/images/service-item1.png"></div>
+                <div class="service-item-describe">
+                    <h3>打破传统模式</h3>
+                    <p>大力推崇互联网+,颠覆传统行业</p>
+                </div>
+            </div>
+            <div class="service-item inline-item">
+                <div class="service-item-icon"><img src="/activity/images/service-item2.png"></div>
+                <div class="service-item-describe">
+                    <h3>市场潜力巨大</h3>
+                    <p>家庭教育服务规模, 潜力巨大</p>
+                </div>
+            </div>
+            <div class="service-item inline-item">
+                <div class="service-item-icon"><img src="/activity/images/service-item3.png"></div>
+                <div class="service-item-describe">
+                    <h3>融资</h3>
+                    <p>累计融资7000万, 雄厚经济实力</p>
+                </div>
+            </div>
+            <div class="service-item inline-item">
+                <div class="service-item-icon"><img src="/activity/images/service-item4.png"></div>
+                <div class="service-item-describe">
+                    <h3>家庭服务</h3>
+                    <p>服务家长累计超过10万人次</p>
+                </div>
+            </div>
+        </div>
+        <div class="service-line">
+            <div class="service-item inline-item">
+                <div class="service-item-icon"><img src="/activity/images/service-item5.png"></div>
+                <div class="service-item-describe">
+                    <h3>师资力量</h3>
+                    <p>入驻老师已超过2万人</p>
+                </div>
+            </div>
+            <div class="service-item inline-item">
+                <div class="service-item-icon"><img src="/activity/images/service-item6.png"></div>
+                <div class="service-item-describe">
+                    <h3>APP操作方便</h3>
+                    <p>操作简介，下载app，直接操作</p>
+                </div>
+            </div>
+            <div class="service-item inline-item">
+                <div class="service-item-icon"><img src="/activity/images/service-item7.png"></div>
+                <div class="service-item-describe">
+                    <h3>城市覆盖率</h3>
+                    <p>已覆盖一二线城市10多个</p>
+                </div>
+            </div>
+            <div class="service-item inline-item">
+                <div class="service-item-icon"><img src="/activity/images/service-item8.png"></div>
+                <div class="service-item-describe">
+                    <h3>教育保证</h3>
+                    <p>13年的教育保证，值得信赖</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="service-comparison">
+    <div class="invest-row">
+        <div class="invest-row-title">
+            <div class="invest-row-title-text">选师无忧VS传统机构</div>
+            <div class="cut-line"></div>
+        </div>
+        <div class="invest-row-detail xs51-service-row">
+            <div class="xs51-service inline-item">
+                <div class="xs51-service-title">选师无忧</div>
+                <div class="xs51-service-img"><img src="/activity/images/xs51-1.png"><img src="/activity/images/xs51-3.png"><img src="/activity/images/xs51-2.png"></div>
+                <div class="xs51-service-describe">
+                    <p>1. 来自全国8000所名校全职老师，211高校优秀大学生老师</p>
+                    <p>2. 不收取任何中介费用，老师收入更多，发展潜力高</p>
+                    <p>3. 师资信息完善、公开透明、严格审核机制、一对一辅导效果有保障</p>
+                    <p>4. 羊城晚报"岭南教育(最受学生喜爱在线教育平台)金鼎奖"，生源保障</p>
+                </div>
+                <div class="service-thumb"><img src="/activity/images/xs-thumb.png" alt=""></div>
+            </div>
+            <div class="xs51-service old-service inline-item">
+                <div class="gray-background xs51-service-title">传统模式</div>
+                <div class="xs51-service-img"><img src="/activity/images/xs51-4.png"><img src="/activity/images/xs51-5.png"><img src="/activity/images/xs51-6.png"></div>
+                <div class="xs51-service-describe gray-font">
+                    <p>1. 家长找老师难、好老师贵</p>
+                    <p>2. 老师分成收入低、无发展空间</p>
+                    <p>3. 师资信息不透明不对称、辅导效果差</p>
+                    <p>4. 优秀创业老师却少招生聚到</p>
+                </div>
+                <div class="service-thumb"><img src="/activity/images/old-thumb.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="technology-platform">
+    <div class="invest-row">
+        <div class="invest-row-title">
+            <div class="invest-row-title-text white-text">领先的技术平台</div>
+            <div class="cut-line"></div>
+        </div>
+        <div class="service-platform">
+            <div class="platform-title"><span>方便快捷&nbsp;&nbsp;&nbsp;&nbsp;</span><span>一键预约</span></div>
+            <div class="platform-img"><img src="/activity/images/technology-platform.png" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="service-users">
+    <div class="invest-row">
+        <div class="invest-row-title">
+            <div class="invest-row-title-text">已服务超过10万家长</div>
+            <div class="cut-line"></div>
+        </div>
+        <div class="service-users-chart">
+            <div class="chart-title"><span>未来亿万家，你我共服务</span></div>
+            <div class="chart-img"><img src="/activity/images/service-user-table.png" alt=""></div>
+        </div>
+    </div>
+</div>
+<div class="corporate-vms">
+    <div class="invest-row">
+        <div class="invest-row-title">
+            <div class="invest-row-title-text white-text">健全的营销体系</div>
+            <div class="cut-line"></div>
+        </div>
+        <div class="market-detail">
+            <div class="market-row">
+                <div class="market-item item-blue">
+                    <div class="market-item-content">
+                        <i class="market-item-icon"><img src="/activity/images/icon-training.png" alt=""></i>
+                        <p>业务培训支持</p>
+                    </div>
+
+                </div>
+                <div class="market-item item-green">
+                    <div class="market-item-content">
+                        <i class="market-item-icon"><img src="/activity/images/icon-platform.png" alt=""></i>
+                        <p>系统平台支持</p>
+                    </div>
+                </div>
+                <div class="market-item item-blue">
+                    <div class="market-item-content">
+                        <i class="market-item-icon"><img src="/activity/images/icon-finace.png" alt=""></i>
+                        <p>财务支持</p>
+                    </div>
+                </div>
+                <div class="market-item item-green">
+                    <div class="market-item-content">
+                        <i class="market-item-icon"><img src="/activity/images/icon-activity.png" alt=""></i>
+                        <p>营销活动支持</p>
+                    </div>
+                </div>
+            </div>
+            <div class="market-row">
+                <div class="market-item item-green">
+                    <div class="market-item-content">
+                        <i class="market-item-icon"><img src="/activity/images/icon-expand.png" alt=""></i>
+                        <p>市场推广支持</p>
+                    </div>
+
+                </div>
+                <div class="market-item item-blue">
+                    <div class="market-item-content">
+                        <i class="market-item-icon"><img src="/activity/images/icon-spread.png" alt=""></i>
+                        <p>公关传播支持</p>
+                    </div>
+                </div>
+                <div class="market-item item-green">
+                    <div class="market-item-content">
+                        <i class="market-item-icon"><img src="/activity/images/icon-legal.png" alt=""></i>
+                        <p>法务支持</p>
+                    </div>
+                </div>
+                <div class="market-item item-blue">
+                    <div class="market-item-content">
+                        <i class="market-item-icon"><img src="/activity/images/icon-operation.png" alt=""></i>
+                        <p>业务运营支持</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="invest-profit">
+    <div class="invest-row">
+        <div class="invest-row-title">
+            <div class="invest-row-title-text">投资和盈利</div>
+            <div class="cut-line"></div>
+        </div>
+        <div class="invest-table">
+            <table border="1" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>城市类别</th>
+                        <th>投资金额</th>
+                        <th>第一年营收</th>
+                        <th>第二年营收</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>一线城市</td>
+                        <td>13～16万</td>
+                        <td>250万</td>
+                        <td>300万</td>
+                    </tr>
+                    <tr>
+                        <td>二线城市</td>
+                        <td>10～15万</td>
+                        <td>180万</td>
+                        <td>216万</td>
+                    </tr>
+                    <tr>
+                        <td>一线城市</td>
+                        <td>8～10万</td>
+                        <td>130万</td>
+                        <td>156万</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="partners">
+    <div class="invest-row">
+        <div class="invest-row-title">
+            <div class="invest-row-title-text white-text">谁可以加入选师无忧城市合伙计划</div>
+            <div class="cut-line"></div>
+        </div>
+        <!--div class="partners-detail">
+            <div class="cooperate-item">
+                <div class="cooperate-item-img"><img src="/activity/images/cooperate-team.png"></div>
+                <h3>优秀团队</h3>
+            </div>
+            <div class="cooperate-item">
+                <div class="cooperate-item-img"><img src="/activity/images/cooperate-finace.png"></div>
+                <h3>创业资源</h3>
+            </div>
+
+
+            <div class="cooperate-item">
+                <div class="cooperate-item-img"><img src="/activity/images/cooperate-resource.png"></div>
+                <h3>本地资源</h3>
+            </div>
+        </div-->
+        <div class="partners-detail">
+            <div class="cooperate-item">
+                <div class="cooperate-item-img"><img src="images/cooperate-team.png"></div>
+                <div class="cooperate-item-title">优秀团队</div>
+            </div>
+            <div class="cooperate-item">
+                <div class="cooperate-item-img"><img src="images/cooperate-finace.png"></div>
+                <div class="cooperate-item-title">创业资源</div>
+            </div>
+
+
+            <div class="cooperate-item">
+                <div class="cooperate-item-img"><img src="images/cooperate-resource.png"></div>
+                <div class="cooperate-item-title">本地资源</div>
+            </div>
+        </div>
+    </div>
+</div>
+<a href="http://form.mikecrm.com/a8EwDS" target="_blank">
+    <div class="apply-entry"></div>
+</a>
+</div>
+<!--</body>-->
+<!--</html>-->
+<%- include('footer') -%>
+<%- include('page-bottom') -%>

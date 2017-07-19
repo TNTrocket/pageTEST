@@ -1,0 +1,232 @@
+<%- include('header') -%>
+
+	<%- include('top') -%>
+
+	<img src="/assets/img/wx74.jpg" class="banner" alt="价格便宜30%">			
+	<div class="partone">
+		<div class="title">请填写您的找老师需求</div>
+		<input name="userName" type="text" placeholder="您的姓名">
+		<input name="userPhone" type="text" placeholder="您的手机号码？（方便后续联系）">
+		<!--div class="error">手机号码格式错误！</div-->
+		<button class="btn submitbtn" type="submit">提交</button>
+	</div>
+	<div class="parttwo">
+		<div class="title">找好老师,清除孩子提分五大障碍</div>
+		<img src="/assets/img/wx75.jpg">
+	</div>	
+	<div class="partthree">
+		<div class="title">选师无忧优秀学员提分案例</div>
+		<div class="tablebox">
+			<table border="1" bordercolor="#dbd8d8">
+				<tr>
+					<th>姓名</th>
+					<th>辅导科目</th>
+					<th>辅导前</th>
+					<th>辅导后</th>
+					<th>提分</th>
+					<th>录取学校</th>
+				</tr>
+				</tr>
+				<% student.map(function (item) { %>
+					<tr>
+						<td><%= item.name %></td>
+						<td><%= item.subject %></td>
+						<td><%= item.tutor_before %></td>
+						<td><%= item.tutor_after %></td>
+						<td><%= (item.tutor_after - item.tutor_before) %></td>
+						<td><%= item.school %></td>
+					</tr>
+				<%	}) %>
+			</table>
+		</div>
+		<a class="btn getscorebtn" href="http://pkt.zoosnet.net/LR/Chatpre.aspx?id=PKT51831902&lng=cn#sem">免费获取提分方案</a>
+	</div>	
+	<div class="partfour">
+		<div class="title">找好老师难？选师无忧一键解决！</div>
+		<ul class="advantages">
+			<li>
+				<div class="advantage">
+					<table width="100%">
+						<tr>
+							<td class="td01">多重认证</td>
+							<td rowspan="2" class="td03"><img src="/assets/img/wx64.png"></td>
+						</tr>
+						<tr>
+							<td class="td02">全面保障师资质量</td>
+						</tr>
+					</table>
+				</div>
+			</li>
+			<li>
+				<div class="advantage">
+					<table width="100%">
+						<tr>
+							<td class="td01">零中介费</td>
+							<td rowspan="2" class="td03"><img src="/assets/img/wx65.png"></td>
+						</tr>
+						<tr>
+							<td class="td02">最高可省学费50%</td>
+						</tr>
+					</table>
+				</div>
+			</li>
+			<li>
+				<div class="advantage">
+					<table width="100%">
+						<tr>
+							<td class="td01">方便快捷</td>
+							<td rowspan="2" class="td03"><img src="/assets/img/wx66.png"></td>
+						</tr>
+						<tr>
+							<td class="td02">随时随地找好老师</td>
+						</tr>
+					</table>
+				</div>
+			</li>
+			<li>
+				<div class="advantage">
+					<table width="100%">
+						<tr>
+							<td class="td01">私人定制</td>
+							<td rowspan="2" class="td03"><img src="/assets/img/wx67.png"></td>
+						</tr>
+						<tr>
+							<td class="td02">您的老师您选择</td>
+						</tr>
+					</table>
+				</div>
+			</li>
+		</ul>
+		<div class="btnbox">
+			<a class="btn getmoredetailbtn" href="http://pkt.zoosnet.net/LR/Chatpre.aspx?id=PKT51831902&lng=cn#sem">了解更多详情</a>
+		</div>
+	</div>
+	<div class="partfive">
+		<div class="title">选师无忧 权威认证</div>
+		<ul class="quality">
+			<li><span>13</span>年专业品质  中国实力教育辅导品牌</li>
+			<li>羊城晚报“岭南教育（最受学生喜爱在线教育平台）金鼎奖</li>
+			<li>一线教育教师，机构专职老师<span>10000+</span></li>
+			<li>全国985、211高校学霸超10000+注册师资，涵盖
+中国人民大学、中山大学、华南理工大学、华南师范大学等高校</li>
+			<li>华南艺术师资<span>最全</span>、收费<span>最低</span>的师资平台，由星海音
+乐学院，广州美术学院长期输送</li>
+		</ul>
+		<div class="honorphoto">
+			<img src="/assets/img/wx68.png" class="left">
+			<img src="/assets/img/wx69.png" class="right">
+		</div>
+	</div>
+	<div class="partsix">
+		<div class="title">服务区域涵盖全国</div>
+		<img src="/assets/img/wx70.png">
+		<a class="btn findteacherbtn" href="http://pkt.zoosnet.net/LR/Chatpre.aspx?id=PKT51831902&lng=cn#sem">找好老师吗？ 点我</a>
+	</div>
+	<div class="partseven">
+		<div class="partsevencon">
+			<div class="left">
+				<div class="title2">立即找好老师，免费体验</div>
+				<input type="text" name="fUserName" placeholder="姓名">
+				<input type="text" name="fPhone" placeholder="手机">
+			</div>
+			<div class="right">
+				<button class="joinusbtn" type="submit"><span>提交</span></button>
+			</div>
+		</div>
+	</div>
+	<div class="bottombox">
+		<a href="" class="logo"><img src="/assets/img/wx71.png"></a>
+		<div class="right">
+			<a href="tel:400-612-5351" class="telbox"><img src="/assets/img/wx63.png" class="tel"><span>400-612-5351</span></a>
+			<div class="time">周一到周日　9:00-21:00</div>
+		</div>
+	</div>
+
+	<%- include('public') -%>
+<script type="text/javascript" src="/assets/javascripts/jquery.min.js"></script>
+<script type="text/javascript">
+function getUrlParam(name) {
+ var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); 
+ var r = window.location.search.substr(1).match(reg); 
+ if (r != null) return unescape(r[2]); return null; 
+}
+$(function() {
+  $('.joinusbtn').click(function (){
+    var username = $('input[name="fUserName"]', '.partsevencon').val();
+    var phone = $('input[name="fPhone"]', '.partsevencon').val();
+
+    if(username == ''){
+      alert('请填写您的姓名');
+      return;
+    }
+    var phoneReg = /^1(3|4|5|6|7|8)\d{9}$/;
+    if(!phoneReg.test(phone)){
+      alert('请填写正确的手机号码');
+      return;
+    }
+    $.ajax({
+      type: "POST",
+      url: '/web/subteacher',
+      data: {
+        'phone': phone,
+        'checksum': 'mobile',
+        'gradeCourse': '未知',
+        'remark': '',
+        'realname': username,
+        'areaId': 440100,
+        'channel': getUrlParam("channel"),
+        'grade': '0'
+      },
+      complete: function(e, xhr, settings) {
+        if (e.status === 200) {
+          alert("提交成功")
+          $('input,textarea', '.partone').val('');
+        } else {
+          var rep = JSON.parse(e.responseText);
+          alert(rep.error);
+        }
+      }
+    });
+
+})
+  $('.submitbtn').click(function() {
+    var username = $('input[name="userName"]', '.partone').val();
+    var phone = $('input[name="userPhone"]', '.partone').val();
+
+    if(username == ''){
+      alert('请填写您的姓名');
+      return;
+    }
+    var phoneReg = /^1(3|4|5|6|7|8)\d{9}$/;
+    if(!phoneReg.test(phone)){
+      alert('请填写正确的手机号码');
+      return;
+    }
+    $.ajax({
+      type: "POST",
+      url: '/web/subteacher',
+      data: {
+        'phone': phone,
+        'checksum': 'mobile',
+        'gradeCourse': '未知',
+        'remark': '',
+        'realname': username,
+        'areaId': 440100,
+        'channel': getUrlParam("channel"),
+        'grade': '0'
+      },
+      complete: function(e, xhr, settings) {
+        if (e.status === 200) {
+          alert("提交成功")
+          $('input,textarea', '.partone').val('');
+        } else {
+          var rep = JSON.parse(e.responseText);
+          alert(rep.error);
+        }
+      }
+    });
+
+  });  
+});
+</script>
+<%- include('footer') -%>

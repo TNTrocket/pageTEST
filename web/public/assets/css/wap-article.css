@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.article{background: #fff;padding: 0.4em;border-bottom: 1px solid #eaeaec;margin-bottom: 0.6em;font-size: 0.56em;line-height: 1.5em;}
+.article p{text-indent: 2em;}
+.article img{display: block;width: 100%;height: auto;}
+.article .articlemessage{font-size: 0.52em;line-height: 1.54em;padding-top: 0.38em;text-align: right;}
+.article .articlemessage span{padding-right: 0.85em;}
+.article .articlemessage span:last-child{padding-right: 0;}

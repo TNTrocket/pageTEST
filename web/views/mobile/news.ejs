@@ -1,0 +1,43 @@
+<%- include('header') -%>
+	
+	<%- include('top') -%>
+
+	<%- include('menu') -%>
+ 
+	<%- include('sub-menu') -%>
+
+	<div class="picturenewsbox">
+		<div class="picturenewstitle">
+			<a href="<%= online.route %>" class="consult"><img src="/assets/img/wap24.png" ><span>在线咨询</span></a>
+			<a href="tel:400-612-5351" class="consult"><img src="/assets/img/wap38.png"><span>电话咨询</span></a>
+		</div>
+		<ul class="picturenews">
+			<% columnNews.childColumns.map(function (item) { %>
+				<li>
+					<a href="<%= item.route %>">
+						<img src="<%= item.image %>" />
+						<div class="newsname"><%= item.name %></div>
+					</a>
+				</li>
+			<%	}) %>
+		</ul>
+	</div>
+	<div class="sectiontitle"><span>|</span><%= title %></div>
+	<ul class="linkallarticles">
+		<% articleList.map(function (item) { %>
+			<li><a href="<%= item.route %>"><%= item.title %></a></li>
+		<%	}) %>
+	</ul>
+	<div class="sectiontitle"><span>|</span>猜你喜欢</div>
+	<ul class="linkallarticles">
+		<% relatedArticleList.map(function (item) { %>
+			<li><a href="<%= item.route %>"><%= item.title %></a></li>
+		<%	}) %>
+	</ul>
+	<div class="bannerpaddingbox">
+		<a href=""><img src="/assets/img/wap30.jpg"></a>
+	</div>
+
+	<%- include('public') -%>
+
+<%- include('footer') -%>

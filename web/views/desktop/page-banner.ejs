@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="page-banner"><img src="/assets/images/banner.jpg" class="img-responsive" /></div>
+</div>
+<div class="row">
+    <div class="banner-line"></div>
+</div>
+<div class="row">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 subpage-location">
+                <div class="pull-left location-info">
+                    <span>您的当前位置：</span>
+                </div>
+                <div class="pull-left">
+                    <ol class="breadcrumb">
+                        <li><a href="/">首页</a></li>
+                        <% if(breadcrumb.length > 0) { var route = ''; %>
+                            <% for(var i = breadcrumb.length - 1; i >= 0; i--) { route += '/' + breadcrumb[i].route  %>
+                                <li class="<%= i == 0 ? 'active' : '' %>"><a href="<%= route %>"><%= breadcrumb[i].name %></a></li>
+                            <%  } %>
+                        <%  } %>
+                    </ol>
+                </div>
+            </div>
+            <!--<div class="col-md-4">
+                <ul class="pull-right guarantee">
+                    <li><img src="/assets/images/ic_authentication.png" />官方认证</li>
+                    <li><img src="/assets/images/ic_refund.png" />随时退款</li>
+                    <li><img src="/assets/images/ic_pay.png" />支付担保</li>
+                </ul>
+            </div>-->
+        </div>
+    </div>
+</div>

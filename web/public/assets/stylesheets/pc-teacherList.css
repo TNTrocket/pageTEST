@@ -1,0 +1,66 @@
+@charset "UTF-8";
+.header .allCourseBtn img{display:inline;}
+.con{width:1000px;overflow: hidden;padding:35px 0  79px 0;margin:0 auto;}
+.leftCon{width: 747px;float: left;}
+.rightCon{width: 238px;float: right;}
+.searchCriteria{padding:20px 14px 0 14px;border: 1px solid #dedede;line-height: 22px;color: #666;background: #fff;margin-bottom: 14px;}
+.criteria{overflow: hidden;padding-bottom: 14px;}
+.criteria .criteriaName{float: left;color: #999;margin-right:10px ;}
+.criteria .unlimited{float: left;padding:0 5px;}
+.criteria .unlimited.on{background: #49bfe0;color: #fff;}
+.criteria ul{float: right;overflow: hidden;width:588px;}
+.criteria ul li{padding:0 5px;float: left;margin-right:5px;margin-bottom: 6px;}
+.criteria ul li.on{background: #49bfe0;color: #fff;}
+.allTeacherBoxOut{background: #fff;}
+.sortingMethod{overflow: hidden;background: #fafafa;border-bottom: 1px solid #dedede;}
+.sortingMethod li{float: left;width: 149px;*width: 148px;height: 53px;line-height: 53px;text-align: center;color: #666;border-right: 1px solid #dedede;}
+.sortingMethod li img{margin:0 0 2px 10px;}
+.sortingMethod li.on,.sortingMethod li.reversible,.sortingMethod li:hover{background: #49bfe0;color: #fff;}
+.sortingMethod li.last{border-right: 0;}
+.sortingMethod li .selectedImg{display: none;}
+.sortingMethod li .reversibleImg{display: none;}
+.sortingMethod li .defaultImg{display: inline;}
+.sortingMethod li.on .selectedImg{display: inline;}
+.sortingMethod li.on .reversibleImg{display: none;}
+.sortingMethod li.on .defaultImg{display: none;}
+.sortingMethod li:hover .selectedImg{display: inline;}
+.sortingMethod li:hover .reversibleImg{display: none;}
+.sortingMethod li:hover .defaultImg{display: none;}
+.sortingMethod li.reversible .selectedImg{display: none;}
+.sortingMethod li.reversible .reversibleImg{display: inline;}
+.sortingMethod li.reversible .defaultImg{display: none;}
+
+.TeacherBox{padding:30px 0 22px 14px;border-bottom: 1px solid #dedede;}
+.TeacherBox th,.TeacherBox td{vertical-align: top;}
+.faceBox{display: block;width: 91px;height: 91px;border-radius: 4px;overflow: hidden;}
+.faceBox img{width:100%;height: auto;}
+.TeacherBox .name{font-size: 18px;color: #333;}
+.TeacherBox .subject span{font-size: 14px;color: #333;margin-right: 14px;}
+.TeacherBox .brief{color: #666;padding-right: 3em;}
+.TeacherBox .price{color: #ff5726;font-size: 12px;}
+.TeacherBox .price span{font-size: 18px;}
+.TeacherBox .teachAge{color: #666;}
+.TeacherBox .evaluationNumber{color: #999;}
+.TeacherBox .authentication li{overflow: hidden;height: 28px;}
+.TeacherBox .authentication li img{float: left;margin-right: 6px;}
+.TeacherBox .authentication li span{float: left;color: #999;line-height: 23px;}
+.TeacherBox .honor span{line-height: 21px;font-size: 12px;color: #999;padding: 0 14px;border-radius: 11px;display: inline-block;margin:0 17px 8px 0;border: 1px solid #999;}
+.recommendTeacherBox{background: #fff;box-shadow: 0px 3px 5px 0px rgb( 240, 240, 240 );margin-bottom: 20px;}
+.recommendTeacherBox a{display: block;}
+.rightCon .title{line-height: 49px;color: #000;padding:0 14px;display: block;border-bottom: 1px solid #dedede;font-size: 16px;overflow: hidden;}
+.rightCon .title .left{color: #000;float: left;}
+.rightCon .title .right{float: right;}
+.rightCon .allrecommend{padding:15px 12px 0 14px;overflow: hidden;}
+.rightCon .allrecommend table{margin-bottom: 17px;}
+.rightCon .allrecommend .faceBox{display: block;width: 63px;height: 63px;overflow: hidden;}
+.rightCon .allrecommend .faceBox img{width:100%;height: auto;}
+.rightCon .allrecommend .name{font-size: 16px;color: #333;}
+.rightCon .allrecommend table:hover .name{color: #49bfe0;}
+.rightCon .allrecommend .suject span{color: #999;margin-right: 9px;}
+.rightCon .commonProblems{background: #fff;}
+
+.allProblems {padding: 14px 14px 14px 28px;}
+.allProblems  li{list-style-type:decimal;list-style-position:outside;
+line-height: 17px;padding:7px 0;}
+.allProblems a{color: #646464;}
+.allProblems a:hover{color: #49bfe0;}

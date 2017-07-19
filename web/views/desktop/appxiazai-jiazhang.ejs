@@ -1,0 +1,86 @@
+<%- include('header') -%>
+
+    <link rel="stylesheet" href="/assets/stylesheets/student.css">
+    
+    <div class="row">
+        <div class="banner-out">
+            <div class="banner">
+                <p style="font-size:60px;font-weight:bolder;line-height:80px;">海量学霸、名校名师</p>
+                <p style="font-size:40px;line-height:62px;margin-bottom:70px;">等你来选！！！</p>
+                <a href="#scan-code-download" class="download"><p>马上下载</p></a>
+            </div>
+        </div>
+        <div class="section1 section">
+            <h2>足不出户，在家里也可以挑选名师</h2>
+            <ul class="screenshot">
+                <li>
+                    <dl>
+                        <dt><img src="/assets/images/screenshot1.png"></dt>
+                        <dd>首页点击科目搜索</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt><img src="/assets/images/screenshot2.png"></dt>
+                        <dd>搜索框搜索老师</dd>
+                    </dl>
+                </li>
+                <li style="margin-right:0;">
+                    <dl>
+                        <dt><img src="/assets/images/screenshot3.png"></dt>
+                        <dd>免费客服电话</dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+        <div class="section2-out">
+            <div class="section2 section">
+                <h2>老师认证【身份证认证、教师资格认证】<br>保证教学质量，让你找的放心</h2>
+                <ul class="screenshot">
+                    <li>
+                        <dl>
+                            <dt><img src="/assets/images/screenshot4.png"></dt>
+                            <dd>老师申请认证图片</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <dl>
+                            <dt><img src="/assets/images/screenshot5.png"></dt>
+                            <dd>老师教师资格证图片</dd>
+                        </dl>
+                    </li>
+                    <li style="margin-right:0;">
+                        <dl>
+                            <dt><img src="/assets/images/screenshot6.png"></dt>
+                            <dd>老师列表认证标识</dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section3-out" id="scan-code-download">
+            <div class="section3 section">
+                <p style="line-height:105px;padding-bottom:30px;font-size:36px;font-weight:bold;text-align:center;">下载选师无忧、万千名师让你选</p>
+                <div class="download-btn">
+                    <a href="https://itunes.apple.com/cn/app/xuan-shi-wu-you/id1032937897?mt=8" target="_blank" style="margin-right:88px;"><p class="iPhone">iPhone下载</p></a>
+                    <a href="http://51xuanshi.com/app/GetAndroidAPK?type=3 "><p class="android">Android下载</p></a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <%- include('footer') -%>
+
+    <script type="text/javascript">
+        $(function(){
+            $('.banner a').click(function(e) {
+                $("html,body").animate({scrollTop: $("#scan-code-download").offset().top}, 1000);
+            });
+        })
+    </script>
+
+    
+<%- include('page-bottom') -%>
+

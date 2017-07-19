@@ -1,0 +1,93 @@
+@charset "UTF-8";
+*,*:before,*:after {box-sizing: inherit;}
+a,button,input {-webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color: transparent;}
+html { box-sizing: border-box;}
+p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,li,span,input,a,lable,b,u,button,select,option,body,img,table,td,th{margin:0;padding:0;list-style:none;}
+body{background: #f5f5f9;font-size:50px;color: #333;}
+a,a:link,a:active,a:visited,a:hover,a:focus,a:active{text-decoration:none;outline:0;}
+table{border-spacing:0;border-collapse:collapse;}
+img{vertical-align: middle;border:0;}
+input,input:focus{border: 0;}
+button{background: none;border:0;}
+a,button,input {-webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color: transparent;}
+.headerlineplaceholder{height: 1.76em;}
+.headerline{width:100%;background: #2eb3ff;height: 1.76em;overflow: hidden;position: fixed;top:0;left:0;z-index: 10;}
+.headerline .selectcitybtn{position: absolute;left:0.4em;top: 0.34em;color: #fff;line-height: 0.8em;z-index: 20;}
+.headerline .selectcitybtn span{font-size: 0.64em;}
+.headerline .selectcitybtn img{width: 0.34em;height: auto;margin-left: 0.28em;}
+.headerline .logo{display: block;width:3.32em;margin: 0.4em auto 0; }
+.headerline .logo img{display: block;width: 100%;height: auto;}
+.headerline .telbox{position: absolute;z-index: 20;right: 0.4em;top: 0;line-height: 1.5em;}
+.headerline .telbox span{color: #fff;font-size: 0.56em;}
+.headerline .back{position: absolute;left: 0;top:0;padding: 0.58em 0.4em;}
+.headerline .back img{display: block;width: 0.38em;height: auto;}
+.headerline p{font-size: 0.8em;color: #fff;text-align: center;line-height: 2.2em;overflow: hidden;margin-left: 22px;margin-right: 88px;text-overflow: ellipsis;white-space: nowrap;}
+.allpagelinks{overflow: hidden;padding: 0.44em 0 0.14em 0;background: #fff;}
+.allpagelinks .link{display:block;width: 25%;background: url('../img/wap2.png') no-repeat right center;background-size:1px 0.56em;float: left;margin-bottom: 0.28em;}
+.allpagelinks .link:nth-child(4n){background: none;}
+.allpagelinks .link span{display: block;width: 4.64em;line-height: 1.61em;font-size: 0.56em;border-radius: 0.29em;color: #646464;text-align: center;margin: 0 auto;}
+.allpagelinks .link.on span{background: #2eb3ff;color: #fff;}
+.fourinterfaces{overflow: hidden;padding: 0.48em 0;background:#fff;border-bottom: 1px solid #eaeaec;margin-top: 0.6em;}
+.fourinterfaces a{display: block;width: 25%;float: left;border-right: 1px solid #eaeaec;text-align: center;}
+.fourinterfaces a img{display: block;width: auto;height: 0.9em;margin: 0.14em auto 0;}
+.fourinterfaces a span{font-size: 0.56em;color: #666;line-height: 1.25em;}
+
+.fixedrightbox{position: fixed;top:30%;right: 0.4em;margin-top: :-1.9em;z-index: 1400;}
+.fixedrightbox .onlineservice{display: block;margin-bottom: 0.6em;}
+.fixedrightbox img{display: block;width: 1.6em;height: auto;margin-bottom: 0.6em;}
+.fixedrightbox .collectinformationbtn{display: block;width: 1.6em;height: auto;}
+.fixedrightbox .backtop{display: none;}
+.informationwindowout{position: fixed;top: 50%;left: 0;width: 100%;padding: 0 0.4em;margin-top: -5.78em;z-index: 1600;display: none;}
+/*.informationwindow{background: #fff;height: 11.56em;border-radius: 0.16em;padding-top: 0.62em;}
+.informationwindowcon{width: 70.42%;margin:0 auto;}
+.informationwindowcon .title{font-size: 0.6em;text-align: center;line-height: 1.53em;}
+.informationwindowcon .bookednumble{text-align: center;line-height: 1em;color: #999;font-size: 0.52em;} 
+.informationwindowcon .bookednumble span{color: #ff4400;}
+.informationwindowcon input{width: 100%;font-size: 0.56em;height: 2.86em;border: 1px solid #eaeaec;border-radius: 0.25em;margin-top: 0.75em;background: #fff;padding: 0 0.79em;}
+.informationwindowcon .submitbtn{font-size: 0.72em;width: 6.94em;height: 2.39em;border-radius: 0.22em;background: #2eb3ff;color: #fff;margin:0.86em auto 0;display: block;}*/
+.appointmentsuccess{position: fixed;top: 50%;left: 50%;width: 8.42em;height: auto;display: block;margin:-5.05em 0 0 -4.21em;z-index: 1600;display: none;}
+.bg{position: fixed;width: 100%;height: 100%;background: rgba(0,0,0,0.5);top: 0;left: 0;z-index: 1500;display: none;}
+.bannerpaddingbox{padding: 0.6em 0.4em 0.2em 0.4em;background: #fff;overflow: hidden;border-top: 1px solid #eaeaec;border-bottom: 1px solid #eaeaec;}
+.bannerpaddingbox a{display: block;margin-bottom: 0.4em;}
+.bannerpaddingbox a img{display: block;width: 100%;height: auto;}
+.sectiontitle{font-size: 0.64em;line-height: 1.5em;padding: 0.8em 0.625em;border-bottom: 1px solid #eaeaec;}
+.sectiontitle span{content: '|'; color: #fdb519; padding-right: 0.41em;}
+/*.sectiontitle span:before{content: '|'; color: #fdb519; padding-right: 0.41em;}*/
+.linkallarticles{padding-left: 0.4em;background: #fff;border-bottom: 1px solid #eaeaec;}
+
+.linkallarticles li{color: #2eb3ff;list-style: inside disc;font-size: 0.56em;line-height: 1.5em;padding: 0.82em 0.71em 0.82em 0;border-bottom: 1px solid #eaeaec;}
+.linkallarticles li:last-child{border-bottom: 0;}
+.linkallarticles li a{color: #333;overflow: hidden;text-overflow: ellipsis;display: block;white-space: nowrap;}
+
+.banner-box{border-top: 1px solid #eaeaec; border-bottom: 1px solid #eaeaec; background: #fff; margin-top: 0.54em;display: block;}
+.banner{display: block;width: 100%;height: auto;}
+
+@media screen and (max-width: 720px) {
+	body{font-size:45px;}
+    .headerline p{margin-left: 42px;margin-right: 175px;}
+}
+@media screen and (max-width: 640px) {
+	body{font-size:40px;}
+    .headerline p{margin-left: 36px;margin-right: 163px;}
+}
+@media screen and (max-width: 560px) {
+	body{font-size:35px;}
+    .headerline p{margin-left: 35px;margin-right: 118px;}
+}
+@media screen and (max-width: 480px) {
+	body{font-size:30px;}
+    .headerline p{margin-left: 28px;margin-right: 118px;}
+}
+@media screen and (max-width: 400px) {
+	body{font-size:25px;}
+    .headerline p{margin-left: 25px;margin-right: 98px;}
+}
+@media screen and (max-width: 320px) {
+	body{font-size:20px;}
+    .headerline p{margin-left: 22px;margin-right: 88px;}
+}
+
+.allitems >div{text-align: center;font-size: 0.56em;color: #333;display: block;line-height: 1.76em;padding-right:0.4em;border-bottom: 1px solid #eaeaec;}
+.allitems >div img{width: 33px;margin: 5px;} 

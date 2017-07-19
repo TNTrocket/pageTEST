@@ -1,0 +1,694 @@
+<%- include('header') -%>
+
+    <link rel="stylesheet" href="/assets/stylesheets/pc-teacherList.css">    
+    <div class="row">
+        
+        <div class="con">
+    <div class="leftCon">
+        <div class="searchCriteria">
+            <div class="criteria" id="teacher_gradecourse">
+                <div class="criteriaName">课程类别：</div>
+                <ul><li data-key="" class="on">全部</li><li data-key="0">高中</li><li data-key="1">初中</li><li data-key="2">小学</li><li data-key="3">艺术爱好</li></ul>
+            </div>
+            <div class="criteria" id="teacher_grade" style="display: none">
+                <div class="criteriaName">年级：</div>
+                <ul>
+                    <li class="on">全部</li>
+                    <li>小学</li>
+                    <li>初中</li>
+                    <li>高中</li>
+                    <li>兴趣</li>
+                </ul>
+            </div>
+            <div class="criteria" id="teacher_course" style="display: none">
+                <div class="criteriaName">科目：</div>
+                <ul>
+                    <li class="on">全部</li>
+                    <li>小学</li>
+                    <li>初中</li>
+                    <li>高中</li>
+                    <li>兴趣</li>
+                </ul>
+            </div>
+            <div class="criteria" id="teacher_gender">
+                <div class="criteriaName">老师性别：</div>
+                <ul>
+                    <li class="on" data-v="">不限</li>
+                    <li data-v="1">男</li>
+                    <li data-v="2">女</li>
+                </ul>
+            </div>
+            <div class="criteria" id="teacher_type">
+                <div class="criteriaName">老师身份：</div>
+                <ul>
+                    <li class="on" data-v="">不限</li>
+                    <li data-v="2">在职老师</li>
+                    <li data-v="1">在校大学生</li>
+                </ul>
+            </div>
+            <div class="criteria" id="teacher_area">
+                <div class="criteriaName">授课区域：</div>
+                <ul><li class="on" data-v="">全部</li><li data-v="440103">荔湾区</li><li data-v="440104">越秀区</li><li data-v="440105">海珠区</li><li data-v="440106">天河区</li><li data-v="440111">白云区</li><li data-v="440112">黄埔区</li><li data-v="440113">番禺区</li><li data-v="440114">花都区</li><li data-v="440115">南沙区</li><li data-v="440117">从化区</li><li data-v="440118">增城区</li></ul>
+            </div>
+            <div class="criteria" id="teacher_teachTime">
+                <div class="criteriaName">上课时间：</div>
+                <ul>
+                    <li class="on" data-v="">不限</li>
+                    <li data-v="A">周一</li>
+                    <li data-v="B">周二</li>
+                    <li data-v="C">周三</li>
+                    <li data-v="D">周四</li>
+                    <li data-v="E">周五</li>
+                    <li data-v="F">周六</li>
+                    <li data-v="G">周日</li>
+                </ul>
+            </div>
+        </div>
+        <div class="allTeacherBoxOut">
+            <ul class="sortingMethod">
+                <li class="on" data-f="strength" data-d="0">
+                    综合排序
+                    <img src="/assets/images/pc15.png" class="defaultImg">
+                    <img src="/assets/images/pc16.png" class="selectedImg">
+                    <img src="/assets/images/pc36.png" class="reversibleImg">
+                </li>
+                <li data-f="priceLowest" data-d="0">
+                    价格
+                    <img src="/assets/images/pc15.png" class="defaultImg">
+                    <img src="/assets/images/pc16.png" class="selectedImg">
+                    <img src="/assets/images/pc36.png" class="reversibleImg">
+                </li>
+                <li data-f="commentCount" data-d="0">
+                    评价
+                    <img src="/assets/images/pc15.png" class="defaultImg">
+                    <img src="/assets/images/pc16.png" class="selectedImg">
+                    <img src="/assets/images/pc36.png" class="reversibleImg">
+                </li>
+                <li data-f="totalTeachHours" data-d="0">
+                    上课数
+                    <img src="/assets/images/pc15.png" class="defaultImg">
+                    <img src="/assets/images/pc16.png" class="selectedImg">
+                    <img src="/assets/images/pc36.png" class="reversibleImg">
+                </li>
+                <li class="last" data-f="totalStudent" data-d="0">
+                    学生数
+                    <img src="/assets/images/pc15.png" class="defaultImg">
+                    <img src="/assets/images/pc16.png" class="selectedImg">
+                    <img src="/assets/images/pc36.png" class="reversibleImg">
+                </li>
+            </ul>
+            <div class="allTeacherBox">
+    
+        <!--a class="TeacherBox1" style="display: block" href="/web/teacher/detail?teacherUid=59325888"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2016/03/oyRO6seZ1457019769_750_750_identify.png@91w" src="http://oss.new.968666.net/face/2016/03/oyRO6seZ1457019769_750_750_identify.png@91w" style="display: inline;"></a>
+                    </th>
+                    <td width="355" class="name">谢军利</td>
+                    <td width="155" class="price"><span>￥220</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>高一数学</span>
+                        
+                            <span>高二数学</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         2年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">擅长数学跟物理，有一对一补习经验</td>
+                    <td class="evaluationNumber">239评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+        <!--a class="TeacherBox" style="display: block" href="/web/teacher/detail?teacherUid=44473958"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2016/03/zcC2A2XW1457064573_400_400_head_up.jpg@91w" src="http://oss.new.968666.net/face/2016/03/zcC2A2XW1457064573_400_400_head_up.jpg@91w" style="display: inline;"></a>
+                    </th>
+                    <td width="355" class="name">石舒维</td>
+                    <td width="155" class="price"><span>￥220</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>高考数学</span>
+                        
+                            <span>高一物理</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         1年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">有付出才会有收获。</td>
+                    <td class="evaluationNumber">201评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+        <!--a class="TeacherBox" style="display: block" href="/web/teacher/detail?teacherUid=29916571"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2015/10/ITOSAneE1446174547_400_400_tmpphppMuKGQ@91w" src="http://oss.new.968666.net/face/2015/10/ITOSAneE1446174547_400_400_tmpphppMuKGQ@91w" style="display: inline;"></a>
+                    </th>
+                    <td width="355" class="name">杜老师</td>
+                    <td width="155" class="price"><span>￥190</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>高一英语</span>
+                        
+                            <span>高二英语</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         13年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">擅长语法和解题策略, 熟悉外语教学法</td>
+                    <td class="evaluationNumber">328评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                            
+                                <span>优秀教师</span>
+                            
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+        <!--a class="TeacherBox" style="display: block" href="/web/teacher/detail?teacherUid=94254359"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2016/03/z2M83r5w1457798552_400_400_head_up.jpg@91w" src="http://oss.new.968666.net/face/2016/03/z2M83r5w1457798552_400_400_head_up.jpg@91w" style="display: inline;"></a>
+                    </th>
+                    <td width="355" class="name">谢军卫</td>
+                    <td width="155" class="price"><span>￥220</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>高一数学</span>
+                        
+                            <span>高二数学</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         1年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">为教育事业燃烧。</td>
+                    <td class="evaluationNumber">146评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+        <!--a class="TeacherBox" style="display: block" href="/web/teacher/detail?teacherUid=23264163"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2016/01/qn3YoQ1G1452503772_400_400_tmpphpgGW83s@91w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+                    </th>
+                    <td width="355" class="name">钟老师</td>
+                    <td width="155" class="price"><span>￥160</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>五年级英语</span>
+                        
+                            <span>初一英语</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         8年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">结合学生的个性,特点，因人因材施教！</td>
+                    <td class="evaluationNumber">171评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+        <!--a class="TeacherBox" style="display: block" href="/web/teacher/detail?teacherUid=56131539"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2016/03/ui6VeBXD1457351587_400_400_head_up.jpg@91w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+                    </th>
+                    <td width="355" class="name">王浩宇</td>
+                    <td width="155" class="price"><span>￥220</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>高一化学</span>
+                        
+                            <span>高二化学</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         1年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">为教育事业奋斗。</td>
+                    <td class="evaluationNumber">155评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+        <!--a class="TeacherBox" style="display: block" href="/web/teacher/detail?teacherUid=54255145"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2016/03/CC4IS99I1457796852_400_400_head_up.jpg@91w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+                    </th>
+                    <td width="355" class="name">欧嘉琳</td>
+                    <td width="155" class="price"><span>￥220</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>高一语文</span>
+                        
+                            <span>高二语文</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         1年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">教育是百年大计。</td>
+                    <td class="evaluationNumber">123评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+        <!--a class="TeacherBox" style="display: block" href="/web/teacher/detail?teacherUid=17417236"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2016/03/ZrrIC2521458054069_400_400_head_up.jpg@91w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+                    </th>
+                    <td width="355" class="name">张闯</td>
+                    <td width="155" class="price"><span>￥220</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>高一语文</span>
+                        
+                            <span>高二语文</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         1年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">真心奉献自己</td>
+                    <td class="evaluationNumber">106评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+        <!--a class="TeacherBox" style="display: block" href="/web/teacher/detail?teacherUid=29834534"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2016/08/MR94MP9M1471968896_400_400_head_up.jpg@91w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+                    </th>
+                    <td width="355" class="name">陈惠连</td>
+                    <td width="155" class="price"><span>￥140</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>高考英语</span>
+                        
+                            <span>高一英语</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         5年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">熟悉考纲考点，教学生动风趣，因人因材施教</td>
+                    <td class="evaluationNumber">12评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+        <!--a class="TeacherBox" style="display: block" href="/web/teacher/detail?teacherUid=89571254"-->
+            <table>
+                <tbody><tr height="41">
+                    <th rowspan="4" width="121">
+                        <a href="#" class="faceBox"><img class="img-lazy" data-original="http://oss.new.968666.net/face/2016/07/X4UM94b71467980243_638_638_identify.png@91w" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"></a>
+                    </th>
+                    <td width="355" class="name">廖桂连</td>
+                    <td width="155" class="price"><span>￥150</span>起</td>
+                    <td rowspan="4">
+                        <ul class="authentication">
+                            <li><img src="/assets/images/pc17.png"><span>身份认证</span></li>
+                            <li><img src="/assets/images/pc18.png"><span>资料认证</span></li>
+                            <li><img src="/assets/images/pc19.png"><span>学历认证</span></li>
+                            <li><img src="/assets/images/pc20.png"><span>教师认证</span></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr height="35">
+                    <td class="subject">
+                        
+                            <span>五年级数学</span>
+                        
+                            <span>小升初数学</span>
+                        
+                    </td>
+                    <td class="teachAge">
+                         32年教龄 
+                        
+                    </td>
+                </tr>
+                <tr height="30">
+                    <td class="brief">在校任教小学数学4-6年级循环32年！</td>
+                    <td class="evaluationNumber">76评价</td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="honor">
+                        
+                    </td>
+                </tr>
+            </tbody></table>
+        <!--/a-->
+    
+</div>
+            <nav>
+  <ul class="pagination">
+    <li class="disabled"><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+  </ul>
+</nav>
+
+        </div>
+    </div>
+    <div class="rightCon">
+        <div class="recommendTeacherBox">
+    <div class="title">推荐老师</div>
+    <div class="allrecommend">
+    
+    <!--a href="/web/teacher/detail?teacherUid=59325888"-->
+        <table>
+            <tbody>
+            <tr>
+                <th rowspan="2" width="77">
+                    <a href="/web/teacher/detail?teacherUid=59325888" class="faceBox">
+                        <img src="http://oss.new.968666.net/face/2016/03/oyRO6seZ1457019769_750_750_identify.png@63w">
+                    </a>
+                </th>
+                <td class="name">谢军利</td>
+            </tr>
+            <tr>
+                <td class="suject">
+                    
+                    <span>高一数学</span>
+                    
+                    <span>高二数学</span>
+                    
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    <!--/a-->
+    
+    <!--a href="/web/teacher/detail?teacherUid=66523679"-->
+        <table>
+            <tbody>
+            <tr>
+                <th rowspan="2" width="77">
+                    <a href="/web/teacher/detail?teacherUid=66523679" class="faceBox">
+                        <img src="http://oss.new.968666.net/face/2015/12/pL1iNP3L1451553581_2448_3264_tmpphpiJ1Wg0@63w">
+                    </a>
+                </th>
+                <td class="name">sdfsd</td>
+            </tr>
+            <tr>
+                <td class="suject">
+                    
+                    <span>运动台球</span>
+                    
+                    <span>初二物理</span>
+                    
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    <!--/a-->
+    
+    <!--a href="/web/teacher/detail?teacherUid=44473958"-->
+        <table>
+            <tbody>
+            <tr>
+                <th rowspan="2" width="77">
+                    <a href="/web/teacher/detail?teacherUid=44473958" class="faceBox">
+                        <img src="http://oss.new.968666.net/face/2016/03/zcC2A2XW1457064573_400_400_head_up.jpg@63w">
+                    </a>
+                </th>
+                <td class="name">石舒维</td>
+            </tr>
+            <tr>
+                <td class="suject">
+                    
+                    <span>高考数学</span>
+                    
+                    <span>高一物理</span>
+                    
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    <!--/a>
+    
+    <a href="/web/teacher/detail?teacherUid=29916571"-->
+        <table>
+            <tbody>
+            <tr>
+                <th rowspan="2" width="77">
+                    <a href="/web/teacher/detail?teacherUid=29916571" class="faceBox">
+                        <img src="http://oss.new.968666.net/face/2015/10/ITOSAneE1446174547_400_400_tmpphppMuKGQ@63w">
+                    </a>
+                </th>
+                <td class="name">杜老师</td>
+            </tr>
+            <tr>
+                <td class="suject">
+                    
+                    <span>高一英语</span>
+                    
+                    <span>高二英语</span>
+                    
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </a>
+    
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(function(){
+        // 推荐老师
+        $.post('/v3e4/search/recommend',{
+            areaId: Utils.getAreaId(),
+            pagesize: 4
+        }, function(res){
+            if(res.ret == 0){
+                Utils.renderTemplate('#recommandTeacherTemplate', {
+                    datas: res.datas.content
+                }, '.recommendTeacherBox .allrecommend');
+            }
+        });
+    });
+</script>       
+<!--<div class="commonProblems">
+    <a href="/web/home/help" class="title">
+        <span class="left">常见问题</span>
+        <span class="right"><img src="/assets/images/pc21.png"></span>
+    </a>
+    <ol class="allProblems">
+        <li><a href="/web/home/help?id=1">选师无忧是什么？</a></li>
+        <li><a href="/web/home/help?id=2">我要怎么找老师？</a></li>
+        <li><a href="/web/home/help?id=3">选师无忧的老师哪来的？</a></li>
+        <li><a href="/web/home/help?id=4">选师无忧的老师可靠么？</a></li>
+        <li><a href="/web/home/help?id=5">找老师要收费么？</a></li>
+        <li><a href="/web/home/help?id=6">如何退费？</a></li>
+        <li><a href="/web/home/help?id=6">提现要多长时间？</a></li>
+    </ol>
+</div>  --></div>
+</div>
+
+    </div>
+
+    <%- include('footer') -%>
+
+    <script type="text/javascript" src="/assets/javascripts/underscore-min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.banner a').click(function(e) {
+                $("html,body").animate({scrollTop: $("#scan-code-download").offset().top}, 1000);
+            });
+        })
+    </script>
+
+    
+<%- include('page-bottom') -%>
+

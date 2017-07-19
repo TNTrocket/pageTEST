@@ -1,0 +1,42 @@
+<%- include('header') -%>
+    
+    <%- include('top') -%>
+
+    <%- include('menu') -%>
+ 
+    <%- include('sub-menu') -%>
+
+
+    <div class="bannertitle">
+        <div class="left">
+            <img src="/assets/img/wap23.png">
+            <span>选师无忧</span>
+        </div>
+        <div class="center">
+            <span>|</span>中国实力教育辅导品牌
+        </div>
+    </div>  
+    <div class="bannerpaddingbox">
+        <a href=""><img src="/assets/img/wap30.jpg"></a>
+    </div>
+
+    <% child_column.map(function (item) { %>
+        <%- include('panel-header', {itemTitle: item.name, itemUrl: item.newRoute}) -%>
+        <div class="allitems" id="childColumnItems_<%= item.id %>">
+            <div><img src="/assets/img/loading.gif" /></div>
+        </div>
+
+        <script type="text/javascript">         
+            $(function () {
+                var column_id = <%= item.id %>;
+                var city_id  = <%= city_id %>;
+                getArticleList({'column_id': column_id}, 'childColumnItems_' + column_id);
+            });
+        </script>
+
+    <%  }) %>
+
+
+    <%- include('public') -%>
+
+<%- include('footer') -%>
